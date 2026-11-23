@@ -4,14 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fire Hydrant & Sprinkler System Installation | The Fire Wala – MSD Engineering</title>
-<meta name="description" content="Fire hydrant and sprinkler system design, installation, testing & commissioning to NBC Part 4 and IS codes. ISO 9001:2015 certified. 500+ projects. Raipur, Chhattisgarh & Central India. Call 7772078610.">
+<meta name="description" content="Fire hydrant and sprinkler system design, installation, testing & commissioning to NBC Part 4 and IS codes. ISO 9001:2015 certified. 700+ clients. Free site survey. Raipur, Chhattisgarh & Central India. Call 7772078610.">
 <meta name="theme-color" content="#004890">
 <meta property="og:title" content="Fire Hydrant & Sprinkler Systems – Designed, Installed & Tested | The Fire Wala">
-<meta property="og:description" content="Book a site survey for hydrant & sprinkler installation. NBC-compliant design, pump room, testing & handover. ISO 9001:2015 certified.">
-<meta property="og:image" content="assets/img/hero-pipes.webp">
+<meta property="og:description" content="Book a FREE site survey for hydrant & sprinkler installation. NBC-compliant design, pump room, testing & handover. ISO 9001:2015 certified.">
+<meta property="og:image" content="https://www.thefirewala.in/hydrant-sprinkler/assets/img/hero-pipes.webp">
+<meta property="og:url" content="https://www.thefirewala.in/hydrant-sprinkler/">
+<link rel="canonical" href="https://www.thefirewala.in/hydrant-sprinkler/">
 <meta property="og:type" content="website">
-<link rel="icon" type="image/png" href="assets/img/favicon.png">
-<link rel="preload" as="image" href="assets/img/hero-pipes.webp">
+<!-- Google Tag Manager (same container as www.thefirewala.in) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KWG9BTJZ');</script>
+<link rel="icon" type="image/png" href="/hydrant-sprinkler/assets/img/favicon.png">
+<link rel="preload" as="image" href="/hydrant-sprinkler/assets/img/hero-pipes.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -41,7 +45,7 @@ fbq('init','YOUR_PIXEL_ID');fbq('track','PageView');
   --body:Arial,Helvetica,system-ui,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
+html{scroll-behavior:smooth;scroll-padding-top:76px;overflow-x:clip}
 body{font-family:var(--body);color:var(--charcoal);background:var(--bg);line-height:1.55;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit}
@@ -82,7 +86,7 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.2;color:var(--navy)}
 
 /* Hero */
 .hero{position:relative;color:#fff;background:var(--navy-x);overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url('assets/img/hero-pipes.webp') center/cover no-repeat}
+.hero-bg{position:absolute;inset:0;background:url('/hydrant-sprinkler/assets/img/hero-pipes.webp') center/cover no-repeat}
 .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,26,51,.97) 0%,rgba(0,48,95,.92) 45%,rgba(0,72,144,.62) 100%)}
 .hero-swoosh{position:absolute;right:-120px;top:-80px;width:620px;opacity:.09;pointer-events:none}
 .hero .wrap{position:relative;display:grid;grid-template-columns:1.12fr .88fr;gap:48px;align-items:center;padding-top:60px;padding-bottom:70px}
@@ -245,8 +249,14 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.2;color:var(--navy)}
 /* Clients */
 .clients{background:#fff;padding:46px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .clients p.h{text-align:center;font-family:var(--head);font-weight:700;color:var(--steel);font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:20px}
-.client-row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px}
-.client-row span{font-family:var(--head);font-weight:700;font-size:15px;color:var(--navy);background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:10px 16px}
+.clients-h{text-align:center;font-size:clamp(24px,3vw,32px);margin:-8px 0 8px}
+.clients-sub{text-align:center;color:var(--gray);margin-bottom:26px}
+.logo-wall{display:grid;grid-template-columns:repeat(11,1fr);gap:12px}
+.logo{min-width:0;background:#fff;border:1px solid var(--line);border-radius:12px;aspect-ratio:1;display:grid;place-items:center;padding:8px;transition:box-shadow .2s,transform .2s}
+.logo:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.logo img{width:100%;height:100%;max-width:100%;object-fit:contain}
+@media (max-width:1020px){.logo-wall{grid-template-columns:repeat(6,1fr)}}
+@media (max-width:720px){.logo-wall{grid-template-columns:repeat(4,1fr);gap:8px}.logo{padding:5px;border-radius:9px}}
 
 /* Certifications */
 .certs{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px}
@@ -348,6 +358,7 @@ footer p{margin-bottom:6px}
 </style>
 </head>
 <body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWG9BTJZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Reusable icon symbols -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -368,7 +379,7 @@ footer p{margin-bottom:6px}
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="The Fire Wala – MSD Engineering">
-      <img src="assets/img/flame.png" alt="" width="27" height="44">
+      <img src="/hydrant-sprinkler/assets/img/flame.png" alt="" width="27" height="44">
       <span>
         <span class="t1">MSD Engineering</span><br>
         <span class="t2">THE FIRE WALA<sup style="font-size:9px">™</sup></span><br>
@@ -380,7 +391,7 @@ footer p{margin-bottom:6px}
         <small>Call our fire engineers</small>
         <span><a href="tel:+917772078610" data-track="call_header_1">77720 78610</a> &nbsp;|&nbsp; <a href="tel:+917772070303" data-track="call_header_2">77720 70303</a></span>
       </div>
-      <a href="#enquiry" class="btn btn-red">Book Site Survey</a>
+      <a href="#enquiry" class="btn btn-red">Book FREE Site Survey</a>
       <a href="tel:+917772078610" class="mcall" data-track="call_header_m"><svg><use href="#i-phone"/></svg>Call Now</a>
     </div>
   </div>
@@ -393,27 +404,27 @@ footer p{margin-bottom:6px}
   <svg class="hero-swoosh" viewBox="0 0 400 400" aria-hidden="true"><g fill="none" stroke="#fff" stroke-width="3"><path d="M60 380C120 250 280 220 340 40"/><path d="M90 390C150 270 300 250 360 70"/><path d="M120 400C180 290 320 280 380 100"/><path d="M150 410C210 310 340 310 400 130"/></g></svg>
   <div class="wrap">
     <div class="hero-copy">
-      <span class="pill"><i></i>Fire Hydrant &amp; Sprinkler Systems · Raipur &amp; Central India</span>
+      <span class="pill"><i></i>FREE Site Survey · Hydrant &amp; Sprinkler Systems · Raipur &amp; Central India</span>
       <h1>Fire Hydrant &amp; Sprinkler Systems — <span class="hl">designed, installed &amp; tested</span> to NBC norms.</h1>
       <p class="lead">From site survey and hydraulic design to pump room, pipeline, testing and handover — one ISO 9001:2015 certified team for hospitals, hotels, factories, warehouses and high-rise buildings.</p>
       <ul class="hero-checks">
         <li><svg><use href="#i-check-o"/></svg>Design as per NBC Part 4 &amp; IS codes</li>
         <li><svg><use href="#i-check-o"/></svg>Fire NOC &amp; insurance-ready documentation</li>
         <li><svg><use href="#i-check-o"/></svg>Hydro, pressure &amp; pump tests on every project</li>
-        <li><svg><use href="#i-check-o"/></svg>In-house engineers &amp; installation team</li>
+        <li><svg><use href="#i-check-o"/></svg>FREE site survey · call-back within 24 hrs</li>
       </ul>
       <div class="hero-cta">
         <a href="tel:+917772078610" class="btn btn-red" data-track="call_hero"><svg><use href="#i-phone"/></svg>Call 77720 78610</a>
         <a href="https://wa.me/917772078610?text=Hi%20The%20Fire%20Wala%2C%20I%20need%20a%20quote%20for%20Fire%20Hydrant%20%2F%20Sprinkler%20system." target="_blank" rel="noopener" class="btn btn-ghost" data-track="wa_hero"><svg><use href="#i-wa"/></svg>WhatsApp Us</a>
       </div>
-      <div class="hero-meta"><span><b>500+</b> projects completed</span><span><b>8+</b> years on-ground</span><span><b>50+</b> member team</span></div>
+      <div class="hero-meta"><span><b>700+</b> clients served</span><span><b>10+</b> years of fire safety</span><span><b>Since 2016</b> · Raipur</span></div>
     </div>
 
     <!-- ===== LEAD FORM ===== -->
     <div class="form-card" id="enquiry">
       <div class="fh">
-        <h3>Book a Site Survey &amp; Quote</h3>
-        <p>Share a few details — our fire protection engineer will call you back.</p>
+        <h3>Book a FREE Site Survey</h3>
+        <p>Share a few details — our fire protection engineer will call you <b>within 24 hours</b>.</p>
       </div>
       <form id="leadForm" novalidate>
         <div class="field" id="f-service">
@@ -489,13 +500,13 @@ footer p{margin-bottom:6px}
         <!-- hidden tracking fields -->
         <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="utm_content"><input type="hidden" name="fbclid"><input type="hidden" name="page">
         <div class="sr"><label>Leave empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-        <button type="submit" class="btn btn-red" id="submitBtn">Get My Free Callback →</button>
+        <button type="submit" class="btn btn-red" id="submitBtn">Book My FREE Site Survey →</button>
         <p class="f-note"><svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.4 9-8 11-4.6-2-8-6-8-11V5z" fill="#00A0B0" opacity=".25"/><path d="M8.5 12l2.4 2.4 4.6-4.8" fill="none" stroke="#00A0B0" stroke-width="2"/></svg>Your details are safe with us. No spam, ever.</p>
       </form>
       <div class="success" role="status" aria-live="polite">
         <div class="tick"><svg width="36" height="36" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#1fa855" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>Thank you, <span id="sName">we've got it</span>!</h3>
-        <p>Our fire protection engineer will call you shortly on <b id="sPhone"></b>. Want a faster response? Send your details on WhatsApp too.</p>
+        <p>Our fire protection engineer will call you <b>within 24 hours</b> on <b id="sPhone"></b> to schedule your FREE site survey. Want a faster response? Send your details on WhatsApp too.</p>
         <a id="sWa" href="https://wa.me/917772078610" target="_blank" rel="noopener" class="btn btn-wa" data-track="wa_after_submit"><svg><use href="#i-wa"/></svg>Send on WhatsApp</a>
         <a href="tel:+917772078610" class="btn btn-navy" data-track="call_after_submit"><svg><use href="#i-phone"/></svg>Call 77720 78610</a>
       </div>
@@ -506,8 +517,8 @@ footer p{margin-bottom:6px}
 <!-- ================= TRUST STRIP ================= -->
 <section class="trust" aria-label="Company highlights">
   <div class="wrap">
-    <div class="t"><div class="n">8+</div><div class="l">Years of execution</div></div>
-    <div class="t"><div class="n">500+</div><div class="l">Projects completed</div></div>
+    <div class="t"><div class="n">10+</div><div class="l">Years of fire safety</div></div>
+    <div class="t"><div class="n">700+</div><div class="l">Clients served</div></div>
     <div class="t"><div class="n">50+</div><div class="l">Team members</div></div>
     <div class="t"><div class="n sm">ISO 9001:2015</div><div class="l">Certified company</div></div>
     <div class="t"><div class="n sm">MSME · GeM</div><div class="l">Registered</div></div>
@@ -533,7 +544,7 @@ footer p{margin-bottom:6px}
     </div>
     <div class="callout rv">
       <p>Fire ke pehle kuch minute sabse critical hote hain. <span>Your hydrant and sprinkler system acts before the fire brigade arrives.</span></p>
-      <a href="#enquiry" class="btn btn-red">Get Expert Advice</a>
+      <a href="#enquiry" class="btn btn-red">Book FREE Site Survey</a>
     </div>
   </div>
 </section>
@@ -630,7 +641,7 @@ footer p{margin-bottom:6px}
           </svg>
           <p class="cap">Tank → Pump room → Risers → Landing valves, hose reels &amp; yard hydrants</p>
         </div>
-        <div class="photo-badge"><img src="assets/img/install-crew.webp" alt="Fire protection installation team working on site" loading="lazy" width="1200" height="795"><span>Survey · Design · Supply · Install · Test · Handover</span></div>
+        <div class="photo-badge"><img src="/hydrant-sprinkler/assets/img/install-crew.webp" alt="Fire protection installation team working on site" loading="lazy" width="1200" height="795"><span>Survey · Design · Supply · Install · Test · Handover</span></div>
       </div>
     </div>
 
@@ -718,7 +729,7 @@ footer p{margin-bottom:6px}
           </svg>
           <p class="cap">Heat-activated — only the sprinkler over the fire opens</p>
         </div>
-        <div class="photo-badge"><img src="assets/img/ind-logistics.webp" alt="Large warehouse with high storage racks" loading="lazy" width="900" height="600"><span>ESFR protection for high-rack warehouses</span></div>
+        <div class="photo-badge"><img src="/hydrant-sprinkler/assets/img/ind-logistics.webp" alt="Large warehouse with high storage racks" loading="lazy" width="900" height="600"><span>ESFR protection for high-rack warehouses</span></div>
       </div>
     </div>
 
@@ -771,7 +782,7 @@ footer p{margin-bottom:6px}
       <p>A checklist-based process with progress photos and milestone updates — so you always know where your project stands.</p>
     </div>
     <div class="steps">
-      <div class="step rv"><div class="num">1</div><h3>Site Survey</h3><p>Occupancy, risk category, area, height &amp; existing setup</p></div>
+      <div class="step rv"><div class="num">1</div><h3>FREE Site Survey</h3><p>Occupancy, risk category, area, height &amp; existing setup</p></div>
       <div class="step rv"><div class="num">2</div><h3>Design &amp; BOQ</h3><p>Layout drawing, hydraulic review &amp; detailed BOQ</p></div>
       <div class="step rv"><div class="num">3</div><h3>Material Supply</h3><p>Pipes, valves, sprinklers, pumps — quality-checked</p></div>
       <div class="step rv"><div class="num">4</div><h3>Installation</h3><p>Fabrication, routing, supports, pump room &amp; painting</p></div>
@@ -790,12 +801,12 @@ footer p{margin-bottom:6px}
       <h2>Hydrant &amp; sprinkler systems built for your type of building</h2>
     </div>
     <div class="ind-grid">
-      <div class="ind rv"><img src="assets/img/ind-hospital.webp" alt="Hospital reception and corridor" loading="lazy" width="900" height="613"><span class="tag">HEALTHCARE</span><div class="txt"><h3>Hospitals &amp; Clinics</h3><p>Patient rooms, OT corridors, pharmacy &amp; stores — minimal-shutdown installation, NABH readiness support.</p></div></div>
-      <div class="ind rv"><img src="assets/img/ind-hotel.webp" alt="Resort hotel with pool at dusk" loading="lazy" width="900" height="600"><span class="tag">HOSPITALITY</span><div class="txt"><h3>Hotels, Resorts &amp; Banquets</h3><p>Guest rooms, kitchens, banquet halls &amp; lobbies — guest safety and NOC readiness.</p></div></div>
-      <div class="ind rv"><img src="assets/img/ind-warehouse.webp" alt="Warehouse with tall storage racks" loading="lazy" width="900" height="599"><span class="tag">WAREHOUSING</span><div class="txt"><h3>Warehouses &amp; Logistics</h3><p>Rack-level and ESFR sprinkler protection for high-value inventory.</p></div></div>
-      <div class="ind rv"><img src="assets/img/ind-factory.webp" alt="Manufacturing plant production floor" loading="lazy" width="900" height="600"><span class="tag">INDUSTRIAL</span><div class="txt"><h3>Factories &amp; Plants</h3><p>Production areas, utilities and process hazards — protect machinery and uptime.</p></div></div>
-      <div class="ind rv"><img src="assets/img/ind-highrise.webp" alt="High-rise building under construction" loading="lazy" width="900" height="506"><span class="tag">HIGH-RISE</span><div class="txt"><h3>High-rise &amp; Residential</h3><p>Wet risers, landing valves and floor-wise sprinklers for towers and societies.</p></div></div>
-      <div class="ind rv"><img src="assets/img/site-team.webp" alt="Engineering team on a large construction site" loading="lazy" width="1200" height="800"><span class="tag">COMMERCIAL</span><div class="txt"><h3>Malls, Offices &amp; Institutions</h3><p>Malls, offices, schools, colleges and hostels — complete code-compliant coverage.</p></div></div>
+      <div class="ind rv"><img src="/hydrant-sprinkler/assets/img/ind-hospital.webp" alt="Hospital reception and corridor" loading="lazy" width="900" height="613"><span class="tag">HEALTHCARE</span><div class="txt"><h3>Hospitals &amp; Clinics</h3><p>Patient rooms, OT corridors, pharmacy &amp; stores — minimal-shutdown installation, NABH readiness support.</p></div></div>
+      <div class="ind rv"><img src="/hydrant-sprinkler/assets/img/ind-hotel.webp" alt="Resort hotel with pool at dusk" loading="lazy" width="900" height="600"><span class="tag">HOSPITALITY</span><div class="txt"><h3>Hotels, Resorts &amp; Banquets</h3><p>Guest rooms, kitchens, banquet halls &amp; lobbies — guest safety and NOC readiness.</p></div></div>
+      <div class="ind rv"><img src="/hydrant-sprinkler/assets/img/ind-warehouse.webp" alt="Warehouse with tall storage racks" loading="lazy" width="900" height="599"><span class="tag">WAREHOUSING</span><div class="txt"><h3>Warehouses &amp; Logistics</h3><p>Rack-level and ESFR sprinkler protection for high-value inventory.</p></div></div>
+      <div class="ind rv"><img src="/hydrant-sprinkler/assets/img/ind-factory.webp" alt="Manufacturing plant production floor" loading="lazy" width="900" height="600"><span class="tag">INDUSTRIAL</span><div class="txt"><h3>Factories &amp; Plants</h3><p>Production areas, utilities and process hazards — protect machinery and uptime.</p></div></div>
+      <div class="ind rv"><img src="/hydrant-sprinkler/assets/img/ind-highrise.webp" alt="High-rise building under construction" loading="lazy" width="900" height="506"><span class="tag">HIGH-RISE</span><div class="txt"><h3>High-rise &amp; Residential</h3><p>Wet risers, landing valves and floor-wise sprinklers for towers and societies.</p></div></div>
+      <div class="ind rv"><img src="/hydrant-sprinkler/assets/img/site-team.webp" alt="Engineering team on a large construction site" loading="lazy" width="1200" height="800"><span class="tag">COMMERCIAL</span><div class="txt"><h3>Malls, Offices &amp; Institutions</h3><p>Malls, offices, schools, colleges and hostels — complete code-compliant coverage.</p></div></div>
     </div>
     <p class="ind-more rv">Serving Raipur, Chhattisgarh and projects across Central India.</p>
   </div>
@@ -820,7 +831,7 @@ footer p{margin-bottom:6px}
         <li><svg><use href="#i-check-o"/></svg>Handover documents</li>
         <li><svg><use href="#i-check-o"/></svg>Warranty documents</li>
       </ul>
-      <div class="photo"><img src="assets/img/hero-pipes.webp" alt="Pump and pipe header installation" loading="lazy" width="1800" height="1200"></div>
+      <div class="photo"><img src="/hydrant-sprinkler/assets/img/hero-pipes.webp" alt="Pump and pipe header installation" loading="lazy" width="1800" height="1200"></div>
     </div>
     <div class="why">
       <span class="eyebrow rv">Why The Fire Wala</span>
@@ -839,9 +850,32 @@ footer p{margin-bottom:6px}
 <!-- ================= CLIENTS + CERTS ================= -->
 <section class="clients">
   <div class="wrap">
-    <p class="h">Trusted across healthcare, hospitality, education &amp; industry</p>
-    <div class="client-row">
-      <span>Tata Power</span><span>UPL</span><span>Reebok</span><span>PVR INOX</span><span>Malabar Gold &amp; Diamonds</span><span>Jayaswal Neco Industries</span><span>Sanjeevani Hospital</span><span>Dhamtari Christian Hospital</span><span>Maira Resort</span><span>Sambhv Steel Pipes</span>
+    <p class="h">Our clients</p>
+    <h2 class="clients-h">Trusted by 700+ clients across Chhattisgarh</h2>
+    <p class="clients-sub">Hospitals, malls, schools, industries and retail brands rely on The Fire Wala for their fire safety.</p>
+    <div class="logo-wall">
+      <div class="logo"><img src="/hydrant-sprinkler/assets/clients/icon.webp" alt="Icon SolarEN" title="Icon SolarEN" loading="lazy" width="110" height="110"></div>
+      <div class="logo"><img src="/hydrant-sprinkler/assets/clients/neco.webp" alt="Neco" title="Neco" loading="lazy" width="110" height="110"></div>
+      <div class="logo"><img src="/hydrant-sprinkler/assets/clients/pvr.webp" alt="PVR INOX" title="PVR INOX" loading="lazy" width="110" height="110"></div>
+      <div class="logo"><img src="/hydrant-sprinkler/assets/clients/zora.webp" alt="Zora The Mall" title="Zora The Mall" loading="lazy" width="110" height="110"></div>
+      <div class="logo"><img src="/hydrant-sprinkler/assets/clients/colors.webp" alt="Colors Mall" title="Colors Mall" loading="lazy" width="110" height="110"></div>
+      <div class="logo"><img src="/hydrant-sprinkler/assets/clients/apollo.webp" alt="Apollo Sugar Clinics" title="Apollo Sugar Clinics" loading="lazy" width="110" height="110"></div>
+      <div class="logo"><img src="/hydrant-sprinkler/assets/clients/yashwant.webp" alt="Yashwant Hospital" title="Yashwant Hospital" loading="lazy" width="110" height="110"></div>
+      <div class="logo"><img src="/hydrant-sprinkler/assets/clients/shrinathji.webp" alt="Shri Nath Ji Hospital" title="Shri Nath Ji Hospital" loading="lazy" width="110" height="110"></div>
+      <div class="logo"><img src="/hydrant-sprinkler/assets/clients/balaji.webp" alt="Balaji Hospital" title="Balaji Hospital" loading="lazy" width="110" height="110"></div>
+      <div class="logo"><img src="/hydrant-sprinkler/assets/clients/suyashhospital.webp" alt="Suyash Hospital" title="Suyash Hospital" loading="lazy" width="110" height="110"></div>
+      <div class="logo"><img src="/hydrant-sprinkler/assets/clients/shivshakti.webp" alt="Shiv Shakti Hospital" title="Shiv Shakti Hospital" loading="lazy" width="110" height="110"></div>
+      <div class="logo"><img src="/hydrant-sprinkler/assets/clients/ekta.webp" alt="Ekta Child Hospital" title="Ekta Child Hospital" loading="lazy" width="110" height="110"></div>
+      <div class="logo"><img src="/hydrant-sprinkler/assets/clients/cps.webp" alt="Chhattisgarh Public School" title="Chhattisgarh Public School" loading="lazy" width="110" height="110"></div>
+      <div class="logo"><img src="/hydrant-sprinkler/assets/clients/holycross.webp" alt="Holy Cross School" title="Holy Cross School" loading="lazy" width="110" height="110"></div>
+      <div class="logo"><img src="/hydrant-sprinkler/assets/clients/shivom.webp" alt="Shivom Vidyapeeth" title="Shivom Vidyapeeth" loading="lazy" width="110" height="110"></div>
+      <div class="logo"><img src="/hydrant-sprinkler/assets/clients/sinoflex.webp" alt="Sinoflex Chemicals Pvt Ltd" title="Sinoflex Chemicals Pvt Ltd" loading="lazy" width="110" height="110"></div>
+      <div class="logo"><img src="/hydrant-sprinkler/assets/clients/laxmi.webp" alt="Laxmi Rice Mill" title="Laxmi Rice Mill" loading="lazy" width="110" height="110"></div>
+      <div class="logo"><img src="/hydrant-sprinkler/assets/clients/lotus.webp" alt="Lotus Electronics" title="Lotus Electronics" loading="lazy" width="110" height="110"></div>
+      <div class="logo"><img src="/hydrant-sprinkler/assets/clients/anand.webp" alt="Anand Jewellers" title="Anand Jewellers" loading="lazy" width="110" height="110"></div>
+      <div class="logo"><img src="/hydrant-sprinkler/assets/clients/dks.webp" alt="DKS" title="DKS" loading="lazy" width="110" height="110"></div>
+      <div class="logo"><img src="/hydrant-sprinkler/assets/clients/avinash.webp" alt="Avinash" title="Avinash" loading="lazy" width="110" height="110"></div>
+      <div class="logo"><img src="/hydrant-sprinkler/assets/clients/bharat.webp" alt="Bharat" title="Bharat" loading="lazy" width="110" height="110"></div>
     </div>
     <div class="certs">
       <span class="cert"><svg style="color:#00A0B0"><use href="#i-shield"/></svg>ISO 9001:2015</span>
@@ -865,7 +899,7 @@ footer p{margin-bottom:6px}
       <details class="rv" open><summary>We already have fire extinguishers. Why do we need a hydrant system?</summary><p>Extinguishers are meant for small, early-stage fires. A hydrant system provides continuous, high-pressure water for large fires and gives the fire brigade a ready connection to your premises. For most commercial, institutional and industrial buildings it is also an NBC and Fire NOC requirement.</p></details>
       <details class="rv"><summary>We have a hydrant system. Why do we also need sprinklers?</summary><p>A hydrant needs people to operate it. A sprinkler system responds automatically — it starts controlling the fire at its initial stage, even at night or when the area is empty, often before the fire brigade arrives. Together they give you both automatic and manual protection.</p></details>
       <details class="rv"><summary>Will all sprinklers go off and flood the building?</summary><p>No. Each sprinkler head has its own heat-sensitive glass bulb. Only the head(s) directly exposed to the fire's heat open — the rest stay closed. Fire damage is almost always far more expensive than the limited water used.</p></details>
-      <details class="rv"><summary>How much does a hydrant or sprinkler system cost?</summary><p>Cost depends on your building's area, height, hazard class, number of hydrant points or sprinklers, pipe sizes, pump room and tank requirements. After a site survey we give you a detailed BOQ and transparent quotation — no guesswork. Fill the form above or call <a href="tel:+917772078610">77720 78610</a> to get started.</p></details>
+      <details class="rv"><summary>How much does a hydrant or sprinkler system cost?</summary><p>Cost depends on your building's area, height, hazard class, number of hydrant points or sprinklers, pipe sizes, pump room and tank requirements. After a <b>FREE site survey</b> we give you a detailed BOQ and transparent quotation — no guesswork. Fill the form above or call <a href="tel:+917772078610">77720 78610</a> to get started.</p></details>
       <details class="rv"><summary>Do you help with Fire NOC?</summary><p>Yes. We design and document the system as per NBC and local fire authority norms, and provide all test reports, drawings and handover documents needed for your Fire NOC file, along with NOC documentation and technical compliance support. The final approval is issued by the fire department.</p></details>
       <details class="rv"><summary>How long does installation take?</summary><p>Timelines depend on pipe quantity, building size, site readiness and material availability. We share a project schedule with your quotation and keep you updated with regular progress photos and milestone reports.</p></details>
       <details class="rv"><summary>Can you repair or upgrade our existing system?</summary><p>Yes. We review existing hydrant and sprinkler systems for pressure, leakage, pump auto-mode and coverage gaps, then repair, extend or upgrade them — and can maintain them afterwards under an AMC.</p></details>
@@ -880,8 +914,8 @@ footer p{margin-bottom:6px}
     <div class="rv">
       <span class="eyebrow">Aapke Apno Ka Rakhwala</span>
       <h2>Get your hydrant &amp; sprinkler system done right — the first time.</h2>
-      <p>Talk to a fire protection engineer today. Site survey, design, BOQ and a clear quotation for your building.</p>
-      <div class="hero-cta" style="margin-top:22px"><a href="#enquiry" class="btn btn-red">Book Site Survey</a></div>
+      <p>Book a <b style="color:#fff">FREE site survey</b> today — our fire protection engineer calls you within 24 hours, inspects your site and gives you a design, BOQ and clear quotation.</p>
+      <div class="hero-cta" style="margin-top:22px"><a href="#enquiry" class="btn btn-red">Book FREE Site Survey</a></div>
     </div>
     <div class="nums rv">
       <a class="num-card" href="tel:+917772078610" data-track="call_footer_1"><span class="ic"><svg style="color:#fff;width:24px;height:24px"><use href="#i-phone"/></svg></span><span><small>Call us</small><b>77720 78610</b></span></a>
@@ -896,7 +930,7 @@ footer p{margin-bottom:6px}
 <footer>
   <div class="wrap">
     <div>
-      <div class="fb"><img src="assets/img/flame.png" alt="" width="26" height="42"><span><small style="color:#9fb2c9">MSD Engineering</small><b>THE FIRE WALA™</b></span></div>
+      <div class="fb"><img src="/hydrant-sprinkler/assets/img/flame.png" alt="" width="26" height="42"><span><small style="color:#9fb2c9">MSD Engineering</small><b>THE FIRE WALA™</b></span></div>
       <p>Fire hydrant &amp; sprinkler system design, supply, installation, testing, commissioning and AMC.</p>
       <p class="tag">We keep you &amp; your property safe from fire.</p>
     </div>
@@ -919,7 +953,7 @@ footer p{margin-bottom:6px}
 <nav class="mbar" aria-label="Quick contact">
   <a class="c" href="tel:+917772078610" data-track="call_sticky"><svg><use href="#i-phone"/></svg>Call</a>
   <a class="w" href="https://wa.me/917772078610?text=Hi%20The%20Fire%20Wala%2C%20I%20need%20a%20quote%20for%20Fire%20Hydrant%20%2F%20Sprinkler%20system." target="_blank" rel="noopener" data-track="wa_sticky"><svg><use href="#i-wa"/></svg>WhatsApp</a>
-  <a class="q" href="#enquiry">Get Quote</a>
+  <a class="q" href="#enquiry">Free Survey</a>
 </nav>
 <a class="wa-float" href="https://wa.me/917772078610?text=Hi%20The%20Fire%20Wala%2C%20I%20need%20a%20quote%20for%20Fire%20Hydrant%20%2F%20Sprinkler%20system." target="_blank" rel="noopener" aria-label="Chat on WhatsApp" data-track="wa_float"><svg style="color:#fff"><use href="#i-wa"/></svg></a>
 
@@ -928,7 +962,9 @@ footer p{margin-bottom:6px}
    SHEET_URL: paste your Google Apps Script Web App URL here (see README.md → "Connect the form to Google Sheets").
    Until it's set, leads still go to WhatsApp from the thank-you screen. */
 const CONFIG = {
-  SHEET_URL: "",
+  // Same Google Sheet web app used by www.thefirewala.in – leads land in your existing sheet.
+  SHEET_URL: "https://script.google.com/macros/s/AKfycbwasN-crY9yuP1QWLOzz1gcKA2aRIO8TUJEIk8DYoUa6uRTnnpFn1OlgFveo3s_P5lkHg/exec",
+  FORM_ID: "hydrant-sprinkler-lp",
   WHATSAPP: "917772078610"
 };
 
@@ -948,6 +984,7 @@ const CONFIG = {
   // Track call / WhatsApp clicks as Meta "Contact" events
   document.querySelectorAll('[data-track]').forEach(a=>a.addEventListener('click',()=>{
     if(window.fbq) fbq('track','Contact',{content_name:a.dataset.track});
+    (window.dataLayer=window.dataLayer||[]).push({event:'contact_click',link:a.dataset.track});
   }));
 
   const cleanPhone = v => { let d=(v||'').replace(/\D/g,''); if(d.length===12&&d.startsWith('91')) d=d.slice(2); if(d.length===11&&d.startsWith('0')) d=d.slice(1); return d; };
@@ -983,10 +1020,21 @@ const CONFIG = {
 
     if(CONFIG.SHEET_URL){
       try{
-        await fetch(CONFIG.SHEET_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(data)});
+        // Field names match the existing sheet. Property, city, stage, area & note are packed into company_name;
+        // service_type starts with "Hydrant & Sprinkler" so these leads are easy to filter.
+        const details = [data.property, data.city, data.stage, data.area, data.message].filter(Boolean).join(' | ');
+        const utm = [data.utm_source, data.utm_campaign, data.utm_content].filter(Boolean).join(' / ');
+        const payload = {
+          client_name: data.name, phone: data.phone, email: '',
+          company_name: details, service_type: 'Hydrant & Sprinkler – ' + data.service,
+          extinguisher_quantity: '', form_id: CONFIG.FORM_ID + (utm ? ' ['+utm+']' : ''),
+          page: location.href.split('#')[0], website: ''
+        };
+        await fetch(CONFIG.SHEET_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)});
       }catch(err){ /* still show WhatsApp fallback */ }
     }
     if(window.fbq) fbq('track','Lead',{content_name:svc, content_category:data.property});
+    (window.dataLayer=window.dataLayer||[]).push({event:'generate_lead',form_id:CONFIG.FORM_ID,service:svc,property_type:data.property,city:data.city});
 
     const lines = [
       'Hi The Fire Wala, I want a site survey / quote.',
