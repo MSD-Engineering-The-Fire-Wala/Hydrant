@@ -959,11 +959,12 @@ footer p{margin-bottom:6px}
 
 <script>
 /* ============ CONFIG ============
-   SHEET_URL: paste your Google Apps Script Web App URL here (see README.md → "Connect the form to Google Sheets").
-   Until it's set, leads still go to WhatsApp from the thank-you screen. */
+   HYDRANT_SHEET_URL: Web App URL of the dedicated "Hydrant & Sprinkler Leads" sheet
+   (google-apps-script.gs in this repo – see README). When set, every field is saved in its own column.
+   While it is empty, leads fall back to LEGACY_SHEET_URL (the main website's script). */
 const CONFIG = {
-  // Same Google Sheet web app used by www.thefirewala.in – leads land in your existing sheet.
-  SHEET_URL: "https://script.google.com/macros/s/AKfycbwasN-crY9yuP1QWLOzz1gcKA2aRIO8TUJEIk8DYoUa6uRTnnpFn1OlgFveo3s_P5lkHg/exec",
+  HYDRANT_SHEET_URL: "",
+  LEGACY_SHEET_URL: "https://script.google.com/macros/s/AKfycbwasN-crY9yuP1QWLOzz1gcKA2aRIO8TUJEIk8DYoUa6uRTnnpFn1OlgFveo3s_P5lkHg/exec",
   FORM_ID: "hydrant-sprinkler-lp",
   WHATSAPP: "917772078610"
 };
@@ -1018,9 +1019,14 @@ const CONFIG = {
     const btn = document.getElementById('submitBtn');
     btn.disabled = true; btn.textContent = 'Sending…';
 
-    if(CONFIG.SHEET_URL){
+    if(CONFIG.HYDRANT_SHEET_URL){
       try{
-        // Field names match the existing sheet. Property, city, stage, area & note are packed into company_name;
+        // Dedicated hydrant sheet: send every field as JSON (text/plain avoids a CORS preflight)
+        await fetch(CONFIG.HYDRANT_SHEET_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(Object.assign({form_id:CONFIG.FORM_ID},data))});
+      }catch(err){ /* still show WhatsApp fallback */ }
+    } else if(CONFIG.LEGACY_SHEET_URL){
+      try{
+        // Field names match the main website's sheet. Property, city, stage, area & note are packed into company_name;
         // service_type starts with "Hydrant & Sprinkler" so these leads are easy to filter.
         const details = [data.property, data.city, data.stage, data.area, data.message].filter(Boolean).join(' | ');
         const utm = [data.utm_source, data.utm_campaign, data.utm_content].filter(Boolean).join(' / ');
@@ -1030,7 +1036,7 @@ const CONFIG = {
           extinguisher_quantity: '', form_id: CONFIG.FORM_ID + (utm ? ' ['+utm+']' : ''),
           page: location.href.split('#')[0], website: ''
         };
-        await fetch(CONFIG.SHEET_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)});
+        await fetch(CONFIG.LEGACY_SHEET_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)});
       }catch(err){ /* still show WhatsApp fallback */ }
     }
     if(window.fbq) fbq('track','Lead',{content_name:svc, content_category:data.property});

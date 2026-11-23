@@ -50,19 +50,24 @@ The `hydrant_service` project must have Vercel Authentication limited to **previ
 ## Lead form – how it works
 On submit the form:
 1. Validates name, 10-digit Indian mobile, service, property type and city.
-2. Sends the lead to the **same Google Sheet as www.thefirewala.in** (`CONFIG.SHEET_URL`), using the same fields: `service_type` = "Hydrant & Sprinkler – …", `company_name` = property | city | stage | area | note, `form_id` = `hydrant-sprinkler-lp [utm source / campaign]`.
-3. Fires the Meta Pixel **Lead** event (once the Pixel is enabled).
+2. Saves the lead to the **"Hydrant & Sprinkler Leads" Google Sheet** (`CONFIG.HYDRANT_SHEET_URL`) – one column per field, plus Status / Sales Owner / Follow-up columns for the sales team.
+   While `HYDRANT_SHEET_URL` is empty, it falls back to the main website's script (`LEGACY_SHEET_URL`).
+3. Fires the Meta Pixel **Lead** event and a GTM `generate_lead` event.
 4. Shows a thank-you screen with a **"Send on WhatsApp"** button that opens WhatsApp to 77720 78610 with all details pre-filled.
 
 UTM parameters and `fbclid` from the ad URL are captured automatically, so you can see which ad each lead came from.
 
-### Optional: a separate Google Sheet for this page
-1. Create a new Google Sheet, e.g. "Hydrant & Sprinkler Leads".
-2. **Extensions → Apps Script**, delete the sample code, paste all of `google-apps-script.gs`, click Save.
-3. Optional: set `NOTIFY_EMAIL` to get an email for each lead.
-4. **Deploy → New deployment →** select type **Web app** → *Execute as:* **Me**, *Who has access:* **Anyone** → Deploy → allow permissions.
-5. Copy the **Web app URL** (ends with `/exec`).
-6. In `hydrant-sprinkler/index.html`, replace the `SHEET_URL` value near the bottom with the new URL. (This script expects URL-encoded fields – change the `fetch` body back to `new URLSearchParams(data)` if you switch.)
+### Set up the "Hydrant & Sprinkler Leads" Google Sheet (one time, ~5 min)
+1. Go to **sheets.google.com** → Blank spreadsheet → name it **Hydrant & Sprinkler Leads** (put it in the shared company drive).
+2. In the sheet: **Extensions → Apps Script**. Delete the sample code, paste all of `google-apps-script.gs`, click **Save** (💾).
+3. Optional: set `NOTIFY_EMAIL` to get an email for each lead, then Save again.
+4. **Deploy → New deployment →** ⚙ **Select type → Web app**.
+   *Description:* Hydrant leads · *Execute as:* **Me** · *Who has access:* **Anyone** → **Deploy**.
+5. **Authorize access** → pick your account → if Google warns "app isn't verified": **Advanced → Go to (project) → Allow**.
+6. Copy the **Web app URL** (ends with `/exec`). Open it in a browser – it should say *"Hydrant leads endpoint is working"*.
+7. Put the URL in `hydrant-sprinkler/index.html` → `HYDRANT_SHEET_URL: "…"` and deploy. The **Hydrant Leads** tab is created automatically with the first lead.
+
+If you edit the script later: **Deploy → Manage deployments → ✏ Edit → Version: New version → Deploy** (keeps the same URL).
 
 ### Tracking
 Google Tag Manager `GTM-KWG9BTJZ` (same container as the main site) is installed. The page pushes `generate_lead` (form submit) and `contact_click` (call / WhatsApp taps) to the dataLayer – add GTM triggers on these events for your Meta Pixel / Google Ads tags.
