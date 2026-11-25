@@ -32,20 +32,17 @@ The main website (`www.thefirewala.in`) is a different Vercel project. Add this 
 The `hydrant_service` project must have Vercel Authentication limited to **preview deployments only** (Settings → Deployment Protection), otherwise the rewrite hits a Vercel login page.
 
 ## Page sections
-1. Sticky header – logo, both phone numbers, "Book FREE Site Survey"
-2. Hero – headline, key benefits, Call / WhatsApp buttons, **lead form**
-3. Trust strip – 10+ years, 700+ clients, 50+ team, ISO 9001:2015, MSME/GeM, NBC/IS
-4. Pain points – Fire NOC, insurance, non-working systems, new construction…
-5. Service 01 – Fire Hydrant System (diagram, scope, tests, standards)
-6. Service 02 – Fire Sprinkler System (diagram, myth vs reality, ESFR, hazard class)
-7. Hydrant vs Sprinkler comparison
-8. 6-step process
-9. Industries (hospitals, hotels, warehouses, factories, high-rise, commercial)
-10. Deliverables + Why The Fire Wala
-11. Client logo wall (from www.thefirewala.in) & certifications
-12. FAQs
-13. Final call-to-action with both numbers, footer
-14. Mobile: sticky Call / WhatsApp / Get Quote bar. Desktop: floating WhatsApp button.
+Short, services-focused page styled like www.thefirewala.in.
+1. Offer bar (FREE site survey · 24-hr call-back) + navy header with the real logo
+2. Hero – headline, trust pills, Call / WhatsApp, real team photo, **lead form**
+3. Stats strip – 10+ years, 700+ clients, 50+ team, 24-hr call-back
+4. **Services** – Fire Hydrant / Fire Sprinkler tabs with **3D pop-up parts** (`assets/3d/*.svg`: yard hydrant, fire pump, landing valve, hose reel, gauge, sprinkler head, alarm valve)
+5. **How we work** – 3D technician illustration + 6 steps with 3D icons
+6. Trusted by – auto-scrolling client logos + 3 Google reviews
+7. FAQ (4) · final call section · footer
+Floating WhatsApp / "Get a FREE Survey" (desktop), sticky Call / WhatsApp / Free Survey bar (mobile).
+
+The 3D illustrations are hand-built SVGs (light, ~33 KB total). Replace any of them with real product photos / renders later by keeping the same file names (PNG/WebP also fine – update the `src`).
 
 ## Lead form – how it works
 On submit the form:
