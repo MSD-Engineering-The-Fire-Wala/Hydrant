@@ -37,7 +37,7 @@ Short, services-focused page styled like www.thefirewala.in.
 2. Hero – headline, trust pills, Call / WhatsApp, real team photo, **lead form**
 3. Stats strip – 10+ years, 700+ clients, 50+ team, 24-hr call-back
 4. **Services** – Fire Hydrant / Fire Sprinkler tabs with **3D pop-up parts** (`assets/3d/*.svg`: yard hydrant, fire pump, landing valve, hose reel, gauge, sprinkler head, alarm valve)
-4b. **Industries we serve** – 8 compact cards (hospitals, schools, factories, residential, hotels, malls, warehouses, offices)
+4b. **Industries we serve** – 8 photo cards (hospitals, schools, factories, residential, hotels, malls, warehouses, offices)
 5. **How we work** – 3D technician illustration + 6 steps with 3D icons
 6. Trusted by – auto-scrolling client logos + 3 Google reviews
 7. FAQ (4) · final call section · footer
@@ -74,14 +74,14 @@ If the Meta Pixel is **not** already in GTM: in `<head>` of `hydrant-sprinkler/i
 Events tracked: `PageView`, `Lead` (form submit), `Contact` (every call / WhatsApp click).
 
 ## Replacing photos
-The current photos are free stock images from Unsplash (Unsplash License – free for commercial use, no attribution required). Replace them with your own project photos anytime: keep the same file name in `hydrant-sprinkler/assets/img/` (WebP or JPG, ~1200px wide).
+The current photos are free stock images from Unsplash (Unsplash License – free for commercial use, no attribution required). Replace them with your own project photos anytime: keep the same file name in `hydrant-sprinkler/assets/` (WebP or JPG, ~1200px wide).
 
 | File | Used for |
 |---|---|
-| `hero-pipes.webp` | Hero background + deliverables panel (pump room / pipe header) |
-| `install-crew.webp` | Hydrant section photo (installation team) |
-| `ind-logistics.webp` | Sprinkler section photo (high-rack warehouse) |
-| `ind-hospital.webp`, `ind-hotel.webp`, `ind-warehouse.webp`, `ind-factory.webp`, `ind-highrise.webp`, `site-team.webp` | Industry cards |
+| `img/hero-pipes.webp` | Hero background |
+| `proof/team-van.webp` | Hero "Our own trained team" card (from www.thefirewala.in) |
+| `img/ind-*.webp` | Industries we serve cards (Unsplash) |
+| `3d/*.svg` | 3D-style part illustrations, technician and process icons |
 
 Best replacements per brand guidelines: your red-polo technicians at a real pump room, hydrant valve / hose reel close-ups, sprinkler installation on site.
 

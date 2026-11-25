@@ -424,13 +424,14 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
 /* ===== Industries ===== */
 .inds2-sec{padding:64px 0}
 .inds2{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.ind2{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;transition:transform .25s,box-shadow .25s,border-color .25s}
-.ind2:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#f6c9a3}
-.ind2-ic{flex:none;width:58px;height:58px;border-radius:16px;display:grid;place-items:center;font-size:32px;line-height:1;
-  background:linear-gradient(145deg,#fff6ef,#ffe2cc);box-shadow:inset 0 -3px 0 rgba(232,112,16,.18),0 8px 16px rgba(232,112,16,.18);transition:transform .3s cubic-bezier(.2,1.4,.4,1)}
-.ind2:hover .ind2-ic{transform:translateY(-4px) rotate(-6deg) scale(1.08)}
-.ind2 h3{font-size:15.5px;color:var(--navy);margin-bottom:2px}
-.ind2 p{font-size:13px;color:var(--muted);line-height:1.4}
+.ind2{position:relative;margin:0;border-radius:16px;overflow:hidden;aspect-ratio:4/3;background:var(--navy-x);box-shadow:0 6px 18px rgba(6,37,71,.12);transition:transform .3s,box-shadow .3s}
+.ind2 img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.ind2::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,37,71,0) 38%,rgba(6,37,71,.88) 100%)}
+.ind2 figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;z-index:1;color:#fff}
+.ind2 h3{font-size:16px;margin-bottom:2px;color:#fff}
+.ind2 p{font-size:13px;color:#d7e3f1;line-height:1.4}
+.ind2:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.ind2:hover img{transform:scale(1.07)}
 
 /* ===== Trust ===== */
 .revs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
@@ -445,9 +446,9 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
 @media (max-width:720px){
   .tl{grid-template-columns:1fr}
   .inds2{grid-template-columns:1fr 1fr;gap:10px}
-  .ind2{flex-direction:column;align-items:flex-start;gap:10px;padding:14px}
-  .ind2-ic{width:50px;height:50px;font-size:27px}
-  .ind2 h3{font-size:14.5px}
+  .ind2 figcaption{padding:10px 11px}
+  .ind2 h3{font-size:13.5px}
+  .ind2 p{font-size:11.5px}
   .part .lbl{font-size:11.5px;padding:5px 9px}
   .badge{font-size:12px;padding:6px 10px}
   .badge.b2{right:-2%}
@@ -679,14 +680,14 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
       <h2>Hydrant &amp; sprinkler systems for every type of building</h2>
     </div>
     <div class="inds2">
-      <div class="ind2 rv"><span class="ind2-ic" aria-hidden="true">🏥</span><div><h3>Hospitals &amp; Clinics</h3><p>Patient-safe, minimal shutdown</p></div></div>
-      <div class="ind2 rv"><span class="ind2-ic" aria-hidden="true">🏫</span><div><h3>Schools &amp; Colleges</h3><p>Classrooms, labs &amp; hostels</p></div></div>
-      <div class="ind2 rv"><span class="ind2-ic" aria-hidden="true">🏭</span><div><h3>Factories &amp; Plants</h3><p>Production &amp; process areas</p></div></div>
-      <div class="ind2 rv"><span class="ind2-ic" aria-hidden="true">🏢</span><div><h3>Residential Societies</h3><p>High-rise towers &amp; apartments</p></div></div>
-      <div class="ind2 rv"><span class="ind2-ic" aria-hidden="true">🏨</span><div><h3>Hotels &amp; Resorts</h3><p>Rooms, kitchens &amp; banquets</p></div></div>
-      <div class="ind2 rv"><span class="ind2-ic" aria-hidden="true">🛍️</span><div><h3>Malls &amp; Showrooms</h3><p>Retail floors &amp; parking</p></div></div>
-      <div class="ind2 rv"><span class="ind2-ic" aria-hidden="true">📦</span><div><h3>Warehouses</h3><p>Rack &amp; ESFR protection</p></div></div>
-      <div class="ind2 rv"><span class="ind2-ic" aria-hidden="true">🏛️</span><div><h3>Offices &amp; Govt. Buildings</h3><p>Commercial &amp; institutional</p></div></div>
+      <figure class="ind2 rv"><img src="/hydrant-sprinkler/assets/img/ind-hospital2.webp" alt="Hospital building" loading="lazy" width="760" height="560"><figcaption><h3>Hospitals &amp; Clinics</h3><p>Patient-safe, minimal shutdown</p></figcaption></figure>
+      <figure class="ind2 rv"><img src="/hydrant-sprinkler/assets/img/ind-school.webp" alt="School classroom" loading="lazy" width="760" height="560"><figcaption><h3>Schools &amp; Colleges</h3><p>Classrooms, labs &amp; hostels</p></figcaption></figure>
+      <figure class="ind2 rv"><img src="/hydrant-sprinkler/assets/img/ind-factory.webp" alt="Factory production floor" loading="lazy" width="760" height="560"><figcaption><h3>Factories &amp; Plants</h3><p>Production &amp; process areas</p></figcaption></figure>
+      <figure class="ind2 rv"><img src="/hydrant-sprinkler/assets/img/ind-residential.webp" alt="Residential apartment building" loading="lazy" width="760" height="560"><figcaption><h3>Residential Societies</h3><p>High-rise towers &amp; apartments</p></figcaption></figure>
+      <figure class="ind2 rv"><img src="/hydrant-sprinkler/assets/img/ind-hotel.webp" alt="Hotel and resort" loading="lazy" width="760" height="560"><figcaption><h3>Hotels &amp; Resorts</h3><p>Rooms, kitchens &amp; banquets</p></figcaption></figure>
+      <figure class="ind2 rv"><img src="/hydrant-sprinkler/assets/img/ind-mall.webp" alt="Shopping mall interior" loading="lazy" width="760" height="560"><figcaption><h3>Malls &amp; Showrooms</h3><p>Retail floors &amp; parking</p></figcaption></figure>
+      <figure class="ind2 rv"><img src="/hydrant-sprinkler/assets/img/ind-warehouse.webp" alt="Warehouse with storage racks" loading="lazy" width="760" height="560"><figcaption><h3>Warehouses</h3><p>Rack &amp; ESFR protection</p></figcaption></figure>
+      <figure class="ind2 rv"><img src="/hydrant-sprinkler/assets/img/ind-office.webp" alt="Large office floor" loading="lazy" width="760" height="560"><figcaption><h3>Offices &amp; Govt. Buildings</h3><p>Commercial &amp; institutional</p></figcaption></figure>
     </div>
   </div>
 </section>
