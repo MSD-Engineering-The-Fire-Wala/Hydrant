@@ -421,6 +421,17 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
 .st.free .ico{background:var(--peach)}
 .work .cta-row{margin-top:22px}
 
+/* ===== Industries ===== */
+.inds2-sec{padding:64px 0}
+.inds2{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ind2{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.ind2:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#f6c9a3}
+.ind2-ic{flex:none;width:58px;height:58px;border-radius:16px;display:grid;place-items:center;font-size:32px;line-height:1;
+  background:linear-gradient(145deg,#fff6ef,#ffe2cc);box-shadow:inset 0 -3px 0 rgba(232,112,16,.18),0 8px 16px rgba(232,112,16,.18);transition:transform .3s cubic-bezier(.2,1.4,.4,1)}
+.ind2:hover .ind2-ic{transform:translateY(-4px) rotate(-6deg) scale(1.08)}
+.ind2 h3{font-size:15.5px;color:var(--navy);margin-bottom:2px}
+.ind2 p{font-size:13px;color:var(--muted);line-height:1.4}
+
 /* ===== Trust ===== */
 .revs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
 
@@ -429,9 +440,14 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
   .stage{max-width:560px;margin:0 auto;width:100%}
   .tech{max-width:300px}
   .revs{grid-template-columns:1fr}
+  .inds2{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:720px){
   .tl{grid-template-columns:1fr}
+  .inds2{grid-template-columns:1fr 1fr;gap:10px}
+  .ind2{flex-direction:column;align-items:flex-start;gap:10px;padding:14px}
+  .ind2-ic{width:50px;height:50px;font-size:27px}
+  .ind2 h3{font-size:14.5px}
   .part .lbl{font-size:11.5px;padding:5px 9px}
   .badge{font-size:12px;padding:6px 10px}
   .badge.b2{right:-2%}
@@ -462,6 +478,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
     <a href="#top" aria-label="The Fire Wala – MSD Engineering"><img class="logo-w" src="/hydrant-sprinkler/assets/img/logo-white.png" alt="MSD Engineering – The Fire Wala, ISO 9001:2015 certified" width="141" height="52"></a>
     <nav class="nav" aria-label="Sections">
       <a href="#services">Services</a>
+      <a href="#industries">Industries</a>
       <a href="#process">How we work</a>
       <a href="#clients">Clients</a>
       <a href="#faq">FAQ</a>
@@ -650,6 +667,26 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
         <div class="part" style="right:2%;top:10%;width:20%"><img src="/hydrant-sprinkler/assets/3d/pressure-gauge.svg" alt="Pressure gauge" width="200" height="230"><span class="lbl">Pressure Gauge</span></div>
         <div class="part" style="left:30%;top:58%;width:40%"><img src="/hydrant-sprinkler/assets/3d/fire-pump.svg" alt="Sprinkler pump" width="300" height="220"><span class="lbl">Sprinkler Pump</span></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="sec inds2-sec" id="industries">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Industries we serve</span>
+      <h2>Hydrant &amp; sprinkler systems for every type of building</h2>
+    </div>
+    <div class="inds2">
+      <div class="ind2 rv"><span class="ind2-ic" aria-hidden="true">🏥</span><div><h3>Hospitals &amp; Clinics</h3><p>Patient-safe, minimal shutdown</p></div></div>
+      <div class="ind2 rv"><span class="ind2-ic" aria-hidden="true">🏫</span><div><h3>Schools &amp; Colleges</h3><p>Classrooms, labs &amp; hostels</p></div></div>
+      <div class="ind2 rv"><span class="ind2-ic" aria-hidden="true">🏭</span><div><h3>Factories &amp; Plants</h3><p>Production &amp; process areas</p></div></div>
+      <div class="ind2 rv"><span class="ind2-ic" aria-hidden="true">🏢</span><div><h3>Residential Societies</h3><p>High-rise towers &amp; apartments</p></div></div>
+      <div class="ind2 rv"><span class="ind2-ic" aria-hidden="true">🏨</span><div><h3>Hotels &amp; Resorts</h3><p>Rooms, kitchens &amp; banquets</p></div></div>
+      <div class="ind2 rv"><span class="ind2-ic" aria-hidden="true">🛍️</span><div><h3>Malls &amp; Showrooms</h3><p>Retail floors &amp; parking</p></div></div>
+      <div class="ind2 rv"><span class="ind2-ic" aria-hidden="true">📦</span><div><h3>Warehouses</h3><p>Rack &amp; ESFR protection</p></div></div>
+      <div class="ind2 rv"><span class="ind2-ic" aria-hidden="true">🏛️</span><div><h3>Offices &amp; Govt. Buildings</h3><p>Commercial &amp; institutional</p></div></div>
     </div>
   </div>
 </section>

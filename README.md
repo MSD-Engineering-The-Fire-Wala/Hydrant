@@ -37,6 +37,7 @@ Short, services-focused page styled like www.thefirewala.in.
 2. Hero – headline, trust pills, Call / WhatsApp, real team photo, **lead form**
 3. Stats strip – 10+ years, 700+ clients, 50+ team, 24-hr call-back
 4. **Services** – Fire Hydrant / Fire Sprinkler tabs with **3D pop-up parts** (`assets/3d/*.svg`: yard hydrant, fire pump, landing valve, hose reel, gauge, sprinkler head, alarm valve)
+4b. **Industries we serve** – 8 compact cards (hospitals, schools, factories, residential, hotels, malls, warehouses, offices)
 5. **How we work** – 3D technician illustration + 6 steps with 3D icons
 6. Trusted by – auto-scrolling client logos + 3 Google reviews
 7. FAQ (4) · final call section · footer
