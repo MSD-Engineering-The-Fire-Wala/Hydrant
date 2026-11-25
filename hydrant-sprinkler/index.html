@@ -433,6 +433,22 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
 .ind2:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 .ind2:hover img{transform:scale(1.07)}
 
+/* ===== Miniature technicians ===== */
+.has-mini{position:relative;overflow:hidden}
+.has-mini>.wrap{position:relative;z-index:1}
+.mini{position:absolute;z-index:0;pointer-events:none;height:auto;filter:drop-shadow(0 10px 12px rgba(6,37,71,.18))}
+.mini.ladder{right:3%;top:28px;width:150px;transform-origin:50% 100%;animation:sway 3.4s ease-in-out infinite}
+.mini.hose{left:3%;top:26px;width:170px;animation:bob 2.6s ease-in-out infinite}
+.mini.carry{right:5%;top:30px;width:160px;animation:walk .9s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(0)}50%{transform:rotate(1.6deg)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes walk{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-3px) rotate(1deg)}}
+
+/* ===== Final CTA: blurred real team photo ===== */
+.final{position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;inset:-24px;background:url('/hydrant-sprinkler/assets/proof/team-van.webp') center 30%/cover no-repeat;filter:blur(5px) saturate(.9);opacity:.28}
+.final .wrap{position:relative;z-index:1}
+
 /* ===== Trust ===== */
 .revs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
 
@@ -445,6 +461,9 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
 }
 @media (max-width:720px){
   .tl{grid-template-columns:1fr}
+  .mini.ladder{width:72px;top:10px;right:6px}
+  .mini.hose{width:84px;top:10px;left:4px}
+  .mini.carry{width:80px;top:12px;right:6px}
   .inds2{grid-template-columns:1fr 1fr;gap:10px}
   .ind2 figcaption{padding:10px 11px}
   .ind2 h3{font-size:13.5px}
@@ -453,7 +472,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
   .badge{font-size:12px;padding:6px 10px}
   .badge.b2{right:-2%}
 }
-@media (prefers-reduced-motion:reduce){.part{opacity:1;transform:none;transition:none}.part img,.badge{animation:none}}
+@media (prefers-reduced-motion:reduce){.mini{animation:none}.part{opacity:1;transform:none;transition:none}.part img,.badge{animation:none}}
 </style>
 </head>
 <body>
@@ -616,7 +635,8 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
 </section>
 
 <!-- SERVICES with 3D parts -->
-<section class="sec soft" id="services">
+<section class="sec soft has-mini" id="services">
+  <img class="mini ladder" src="/hydrant-sprinkler/assets/3d/mini-ladder.svg" alt="" aria-hidden="true" width="200" height="240" loading="lazy">
   <div class="wrap">
     <div class="head rv">
       <span class="eyebrow">Our services</span>
@@ -673,7 +693,8 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
 </section>
 
 <!-- INDUSTRIES -->
-<section class="sec inds2-sec" id="industries">
+<section class="sec inds2-sec has-mini" id="industries">
+  <img class="mini hose" src="/hydrant-sprinkler/assets/3d/mini-hose.svg" alt="" aria-hidden="true" width="240" height="200" loading="lazy">
   <div class="wrap">
     <div class="head rv">
       <span class="eyebrow">Industries we serve</span>
@@ -788,7 +809,8 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
 </section>
 
 <!-- FAQ -->
-<section class="sec soft" id="faq">
+<section class="sec soft has-mini" id="faq">
+  <img class="mini carry" src="/hydrant-sprinkler/assets/3d/mini-carry.svg" alt="" aria-hidden="true" width="220" height="200" loading="lazy">
   <div class="wrap">
     <div class="head rv">
       <span class="eyebrow">Client questions</span>
@@ -809,7 +831,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
     <div class="rv">
       <span class="eyebrow">Aapke Apno Ka Rakhwala</span>
       <h2>Get your hydrant &amp; sprinkler system done right — the first time.</h2>
-      <p>Book a FREE site survey. Our engineer calls you within 24 hours.</p>
+      <p>Book a FREE site survey. Our team calls you within 24 hours.</p>
       <a href="#enquiry" class="btn btn-o">Book FREE Site Survey</a>
     </div>
     <div class="nums rv">
