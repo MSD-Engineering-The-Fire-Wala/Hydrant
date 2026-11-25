@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+<defs>
+<radialGradient id="face" cx=".4" cy=".35" r=".75"><stop offset="0" stop-color="#ff6a57"/><stop offset=".7" stop-color="#d8231a"/><stop offset="1" stop-color="#8f0f0b"/></radialGradient>
+<radialGradient id="coil" cx=".5" cy=".5" r=".5"><stop offset=".3" stop-color="#c98a12"/><stop offset=".7" stop-color="#ffd27a"/><stop offset="1" stop-color="#b07508"/></radialGradient>
+<linearGradient id="hose" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd27a"/><stop offset="1" stop-color="#c98a12"/></linearGradient>
+<linearGradient id="ch" x1="0" x2="1"><stop offset="0" stop-color="#6f7782"/><stop offset=".4" stop-color="#f4f6f8"/><stop offset="1" stop-color="#5d646e"/></linearGradient>
+<radialGradient id="sh" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#000" stop-opacity=".28"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+</defs>
+<ellipse cx="120" cy="228" rx="90" ry="9" fill="url(#sh)"/>
+<rect x="100" y="160" width="40" height="64" rx="4" fill="url(#ch)"/>
+<circle cx="126" cy="112" r="92" fill="#7d0c08"/>
+<circle cx="118" cy="108" r="92" fill="url(#face)"/>
+<circle cx="118" cy="108" r="74" fill="url(#coil)"/>
+<g fill="none" stroke="#a86f06" stroke-width="2.2" opacity=".7">
+<circle cx="118" cy="108" r="70"/><circle cx="118" cy="108" r="62"/><circle cx="118" cy="108" r="54"/><circle cx="118" cy="108" r="46"/><circle cx="118" cy="108" r="38"/></g>
+<circle cx="118" cy="108" r="30" fill="url(#face)"/>
+<circle cx="118" cy="108" r="16" fill="url(#ch)"/>
+<circle cx="118" cy="108" r="6" fill="#5d646e"/>
+<path d="M60 58a80 80 0 0 1 72-34" stroke="#fff" stroke-width="7" fill="none" opacity=".35" stroke-linecap="round"/>
+<path d="M180 160c18 8 26 28 20 50" stroke="url(#hose)" stroke-width="13" fill="none" stroke-linecap="round"/>
+<path d="M190 204l14 26 11-6-14-26z" fill="url(#ch)"/>
+</svg>

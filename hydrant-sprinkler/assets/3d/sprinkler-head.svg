@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260">
+<defs>
+<linearGradient id="br" x1="0" x2="1"><stop offset="0" stop-color="#8a6210"/><stop offset=".3" stop-color="#f7dc84"/><stop offset=".55" stop-color="#d9a52c"/><stop offset="1" stop-color="#7a540c"/></linearGradient>
+<linearGradient id="brV" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7dc84"/><stop offset="1" stop-color="#9a6d12"/></linearGradient>
+<radialGradient id="bulb" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#ffb3a6"/><stop offset=".25" stop-color="#ff3b2a"/><stop offset=".8" stop-color="#b0120a"/><stop offset="1" stop-color="#6e0805"/></radialGradient>
+<linearGradient id="def" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbe7a3"/><stop offset="1" stop-color="#a8781a"/></linearGradient>
+<radialGradient id="sh" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#000" stop-opacity=".28"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+</defs>
+<ellipse cx="100" cy="248" rx="70" ry="9" fill="url(#sh)"/>
+<!-- threaded nipple -->
+<rect x="74" y="8" width="52" height="44" rx="4" fill="url(#br)"/>
+<g stroke="#7a540c" stroke-width="2.2" opacity=".55"><path d="M74 16h52M74 24h52M74 32h52M74 40h52"/></g>
+<!-- hex boss -->
+<path d="M58 52h84l10 14-10 14H58l-10-14z" fill="url(#br)"/>
+<path d="M58 52h84l10 14H48z" fill="#fff" opacity=".22"/>
+<!-- frame arms -->
+<path d="M66 80c-6 40 10 90 30 120h8c-14-34-22-80-22-120z" fill="url(#br)"/>
+<path d="M134 80c6 40-10 90-30 120h-8c14-34 22-80 22-120z" fill="url(#br)"/>
+<!-- bulb -->
+<rect x="92" y="78" width="16" height="12" rx="3" fill="url(#brV)"/>
+<ellipse cx="100" cy="132" rx="13" ry="40" fill="url(#bulb)"/>
+<ellipse cx="95" cy="116" rx="3.5" ry="16" fill="#fff" opacity=".7"/>
+<rect x="93" y="170" width="14" height="10" rx="3" fill="url(#brV)"/>
+<!-- deflector -->
+<rect x="94" y="180" width="12" height="22" fill="url(#br)"/>
+<ellipse cx="100" cy="206" rx="64" ry="12" fill="#8a6210"/>
+<ellipse cx="100" cy="202" rx="64" ry="12" fill="url(#def)"/>
+<g fill="#8a6210" opacity=".55"><path d="M40 200l10 3-10 3zM160 200l-10 3 10 3zM70 192l6 5-8 1zM130 192l-6 5 8 1zM100 190v8"/></g>
+<ellipse cx="88" cy="198" rx="26" ry="3.5" fill="#fff" opacity=".45"/>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 220">
+<defs>
+<linearGradient id="r" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff6a57"/><stop offset=".45" stop-color="#e02a1d"/><stop offset="1" stop-color="#7d0c08"/></linearGradient>
+<linearGradient id="m" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7aa7d9"/><stop offset=".4" stop-color="#1d5fa8"/><stop offset="1" stop-color="#0a2f5c"/></linearGradient>
+<linearGradient id="ch" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f6f8"/><stop offset=".5" stop-color="#aab2bc"/><stop offset="1" stop-color="#5d646e"/></linearGradient>
+<radialGradient id="vol" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#ff7a66"/><stop offset=".6" stop-color="#d8231a"/><stop offset="1" stop-color="#7d0c08"/></radialGradient>
+<radialGradient id="sh" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#000" stop-opacity=".3"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+</defs>
+<ellipse cx="150" cy="204" rx="140" ry="12" fill="url(#sh)"/>
+<!-- base plate -->
+<path d="M14 180h272l-10 18H24z" fill="#3b4250"/>
+<rect x="14" y="170" width="272" height="12" rx="2" fill="url(#ch)"/>
+<!-- motor -->
+<rect x="150" y="70" width="120" height="96" rx="14" fill="url(#m)"/>
+<g stroke="#0a2f5c" stroke-width="3" opacity=".5"><path d="M166 74v88M182 74v88M198 74v88M214 74v88M230 74v88M246 74v88"/></g>
+<rect x="262" y="84" width="16" height="68" rx="6" fill="url(#m)"/>
+<rect x="190" y="54" width="44" height="20" rx="4" fill="url(#m)"/>
+<rect x="160" y="80" width="100" height="10" rx="5" fill="#fff" opacity=".25"/>
+<!-- coupling -->
+<rect x="124" y="104" width="30" height="30" rx="4" fill="url(#ch)"/>
+<!-- pump volute -->
+<circle cx="80" cy="118" r="52" fill="url(#vol)"/>
+<circle cx="80" cy="118" r="34" fill="none" stroke="#8f0f0b" stroke-width="3" opacity=".5"/>
+<!-- suction & discharge -->
+<rect x="8" y="104" width="30" height="34" rx="4" fill="url(#r)"/>
+<rect x="2" y="98" width="10" height="46" rx="3" fill="url(#ch)"/>
+<rect x="64" y="34" width="32" height="40" rx="4" fill="url(#r)"/>
+<rect x="58" y="26" width="44" height="10" rx="3" fill="url(#ch)"/>
+<rect x="64" y="166" width="34" height="8" fill="#3b4250"/>
+<ellipse cx="64" cy="96" rx="16" ry="10" fill="#fff" opacity=".3"/>
+</svg>

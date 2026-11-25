@@ -32,18 +32,17 @@ The main website (`www.thefirewala.in`) is a different Vercel project. Add this 
 The `hydrant_service` project must have Vercel Authentication limited to **preview deployments only** (Settings → Deployment Protection), otherwise the rewrite hits a Vercel login page.
 
 ## Page sections
-Styled to match www.thefirewala.in (Inter font, orange offer bar, navy header, green WhatsApp buttons).
+Short, services-focused page styled like www.thefirewala.in.
 1. Offer bar (FREE site survey · 24-hr call-back) + navy header with the real logo
 2. Hero – headline, trust pills, Call / WhatsApp, real team photo, **lead form**
 3. Stats strip – 10+ years, 700+ clients, 50+ team, 24-hr call-back
-4. 4 signs you need a hydrant / sprinkler system
-5. Services – **Fire Hydrant / Fire Sprinkler tabs** with diagrams
-6. 30-second fire safety check (quiz – result is added to the form message)
-7. Typical contractor vs The Fire Wala comparison table
-8. 6-step process · 9. Industries
-10. Real team photos + certificates (from www.thefirewala.in)
-11. Client logo strip (auto-scroll) · 12. Google reviews · 13. FAQ
-14. Final call section + footer; floating WhatsApp / "Get a FREE Survey" (desktop), sticky Call / WhatsApp / Free Survey bar (mobile)
+4. **Services** – Fire Hydrant / Fire Sprinkler tabs with **3D pop-up parts** (`assets/3d/*.svg`: yard hydrant, fire pump, landing valve, hose reel, gauge, sprinkler head, alarm valve)
+5. **How we work** – 3D technician illustration + 6 steps with 3D icons
+6. Trusted by – auto-scrolling client logos + 3 Google reviews
+7. FAQ (4) · final call section · footer
+Floating WhatsApp / "Get a FREE Survey" (desktop), sticky Call / WhatsApp / Free Survey bar (mobile).
+
+The 3D illustrations are hand-built SVGs (light, ~33 KB total). Replace any of them with real product photos / renders later by keeping the same file names (PNG/WebP also fine – update the `src`).
 
 ## Lead form – how it works
 On submit the form:

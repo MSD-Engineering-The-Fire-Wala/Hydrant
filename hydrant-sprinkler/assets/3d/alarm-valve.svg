@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 260">
+<defs>
+<linearGradient id="r" x1="0" x2="1"><stop offset="0" stop-color="#8f0f0b"/><stop offset=".3" stop-color="#ff5a47"/><stop offset=".6" stop-color="#e02a1d"/><stop offset="1" stop-color="#7d0c08"/></linearGradient>
+<linearGradient id="ch" x1="0" x2="1"><stop offset="0" stop-color="#6f7782"/><stop offset=".4" stop-color="#f4f6f8"/><stop offset="1" stop-color="#5d646e"/></linearGradient>
+<radialGradient id="g" cx=".4" cy=".35" r=".75"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#dfe5ec"/></radialGradient>
+<radialGradient id="sh" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#000" stop-opacity=".28"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+</defs>
+<ellipse cx="110" cy="248" rx="80" ry="9" fill="url(#sh)"/>
+<!-- pipe -->
+<rect x="86" y="0" width="48" height="250" fill="url(#r)"/>
+<rect x="74" y="40" width="72" height="14" rx="3" fill="url(#ch)"/>
+<rect x="74" y="200" width="72" height="14" rx="3" fill="url(#ch)"/>
+<!-- valve body -->
+<rect x="64" y="66" width="92" height="124" rx="40" fill="url(#r)"/>
+<rect x="80" y="76" width="12" height="104" rx="6" fill="#fff" opacity=".25"/>
+<!-- trim + gauge -->
+<path d="M156 110h30v40" stroke="url(#ch)" stroke-width="10" fill="none"/>
+<circle cx="186" cy="94" r="20" fill="url(#ch)"/><circle cx="186" cy="94" r="15" fill="url(#g)"/>
+<path d="M186 94l7-9" stroke="#c0150e" stroke-width="3"/>
+<path d="M64 140H30v40" stroke="url(#ch)" stroke-width="10" fill="none"/>
+<rect x="18" y="176" width="24" height="18" rx="3" fill="#ffd166"/>
+<!-- tag -->
+<rect x="84" y="112" width="52" height="30" rx="4" fill="#fff"/>
+<text x="110" y="132" font-family="Arial" font-size="12" font-weight="800" fill="#004890" text-anchor="middle">ALARM</text>
+</svg>
