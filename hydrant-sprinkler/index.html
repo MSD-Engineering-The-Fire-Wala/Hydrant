@@ -533,6 +533,10 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
 .rev .av{width:34px;height:34px}
 @media (max-width:720px){
   .hide-sm{display:none!important}
+  #services .svc-copy{display:none}
+  #services .head{margin-bottom:18px}
+  #services .tabs{margin-bottom:8px}
+  #services .svc-grid{gap:0}
   .hero h1{font-size:27px;margin-bottom:8px}
   .hero .pills{margin:10px 0 12px;gap:6px}.hero .pill{font-size:11.5px;padding:5px 9px}
   .ticks{gap:6px;margin-bottom:16px}.ticks li{font-size:14.5px}
@@ -606,9 +610,9 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
     <a href="#top" class="brand" aria-label="The Fire Wala – MSD Engineering, ISO 9001:2015 certified"><img src="/hydrant-sprinkler/assets/img/flame.png" alt="" width="115" height="180"><span><small>MSD Engineering</small><b>THE FIRE WALA<sup>®</sup></b><em>ISO 9001:2015 Certified</em></span></a>
     <nav class="nav" aria-label="Sections">
       <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
       <a href="#industries">Industries</a>
       <a href="#process">How we work</a>
-      <a href="#work">Our Work</a>
       <a href="#clients">Clients</a>
       <a href="#faq">FAQ</a>
       <a href="#enquiry" class="btn btn-o">Book FREE Survey</a>
@@ -801,6 +805,39 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
   </div>
 </section>
 
+<!-- OUR WORK: video hero + photo cards -->
+<section class="sec sites" id="work">
+  <div class="wrap">
+    <div class="vhero rv">
+      <div class="vcopy">
+        <span class="vtag"><i></i>From our sites</span>
+        <h2>Real work, real sites</h2>
+        <p>Short clips from our own hydrant projects — no stock footage.</p>
+        <div class="vtabs" role="tablist" aria-label="Site videos">
+          <button class="vt on" type="button" data-i="0"><span class="n">01</span><span><b>Pump panel demo &amp; handover</b><small>Our engineers walk the client through the fire pump panel — auto start, pressure and controls.</small></span></button>
+          <button class="vt" type="button" data-i="1"><span class="n">02</span><span><b>Hydrant flow test</b><small>Full-pressure hose test at a power substation before handover.</small></span></button>
+        </div>
+      </div>
+      <div class="vbox" id="vbox">
+        <div class="vbars" aria-hidden="true"><span class="bar"><i></i></span></div>
+        <div class="vslide on">
+          <video class="fill" muted loop playsinline preload="none" aria-hidden="true" data-src="/hydrant-sprinkler/assets/video/remix-bg.mp4" poster="/hydrant-sprinkler/assets/video/remix-poster.webp"></video>
+          <video class="main" muted loop playsinline preload="none" data-src="/hydrant-sprinkler/assets/video/remix.mp4" poster="/hydrant-sprinkler/assets/video/remix-poster.webp" aria-label="Video: The Fire Wala team demonstrating the fire pump panel and running a hydrant flow test"></video>
+        </div>
+      </div>
+    </div>
+    <div class="spcs" id="pipeline">
+        <figure class="spc rv" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-pipe-painting.webp" data-cap="Pipes primed &amp; painted fire-red on site"><div class="ph"><img src="/hydrant-sprinkler/assets/sites/site-pipe-painting.webp" alt="Our technician painting hydrant pipes on site" loading="lazy" width="600" height="420"></div><figcaption><span class="tg">Fabrication</span><b>Pipes primed &amp; painted fire-red on site</b></figcaption></figure>
+        <figure class="spc rv" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-pump-room.webp" data-cap="Main &amp; jockey pumps with headers &amp; valves"><div class="ph"><img src="/hydrant-sprinkler/assets/sites/site-pump-room.webp" alt="Fire pump room with red pipeline, pumps and valves" loading="lazy" width="600" height="420"></div><figcaption><span class="tg">Pump Room</span><b>Main &amp; jockey pumps with headers &amp; valves</b></figcaption></figure>
+        <figure class="spc rv" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-wiring.webp" data-cap="Diesel pump &amp; controller wired for auto start"><div class="ph"><img src="/hydrant-sprinkler/assets/sites/site-wiring.webp" alt="Technician wiring the diesel fire pump and control panel" loading="lazy" width="600" height="420"></div><figcaption><span class="tg">Commissioning</span><b>Diesel pump &amp; controller wired for auto start</b></figcaption></figure>
+        <figure class="spc rv" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-team-checks.webp" data-cap="Pressure, valve &amp; pump checks before handover"><div class="ph"><img src="/hydrant-sprinkler/assets/sites/site-team-checks.webp" alt="The Fire Wala team doing checks in the pump room" loading="lazy" width="600" height="420"></div><figcaption><span class="tg">Testing</span><b>Pressure, valve &amp; pump checks before handover</b></figcaption></figure>
+        <figure class="spc rv" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-hose-reel.webp" data-cap="Hose reel &amp; hose cabinet ready at site"><div class="ph"><img src="/hydrant-sprinkler/assets/sites/site-hose-reel.webp" alt="Hose reel, landing valve and hose cabinet installed at a power substation" loading="lazy" width="600" height="420"></div><figcaption><span class="tg">Installed</span><b>Hose reel &amp; hose cabinet ready at site</b></figcaption></figure>
+    </div>
+    <div class="cta-row sites-cta rv"><a href="#enquiry" class="btn btn-o">Book FREE Site Survey</a></div>
+  </div>
+</section>
+<div class="lightbox" id="lightbox" hidden><button class="lb-x" aria-label="Close">×</button><figure><img alt=""><figcaption></figcaption></figure></div>
+
 <!-- INDUSTRIES -->
 <section class="sec inds2-sec has-mini" id="industries">
   <img class="mini hose" src="/hydrant-sprinkler/assets/3d/mini-hose.svg" alt="" aria-hidden="true" width="240" height="200" loading="lazy">
@@ -852,38 +889,6 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
   </div>
 </section>
 
-<!-- OUR WORK: video hero + photo cards -->
-<section class="sec sites" id="work">
-  <div class="wrap">
-    <div class="vhero rv">
-      <div class="vcopy">
-        <span class="vtag"><i></i>From our sites</span>
-        <h2>Real work, real sites</h2>
-        <p>Short clips from our own hydrant projects — no stock footage.</p>
-        <div class="vtabs" role="tablist" aria-label="Site videos">
-          <button class="vt on" type="button" data-i="0"><span class="n">01</span><span><b>Pump panel demo &amp; handover</b><small>Our engineers walk the client through the fire pump panel — auto start, pressure and controls.</small></span></button>
-          <button class="vt" type="button" data-i="1"><span class="n">02</span><span><b>Hydrant flow test</b><small>Full-pressure hose test at a power substation before handover.</small></span></button>
-        </div>
-      </div>
-      <div class="vbox" id="vbox">
-        <div class="vbars" aria-hidden="true"><span class="bar"><i></i></span></div>
-        <div class="vslide on">
-          <video class="fill" muted loop playsinline preload="none" aria-hidden="true" data-src="/hydrant-sprinkler/assets/video/remix-bg.mp4" poster="/hydrant-sprinkler/assets/video/remix-poster.webp"></video>
-          <video class="main" muted loop playsinline preload="none" data-src="/hydrant-sprinkler/assets/video/remix.mp4" poster="/hydrant-sprinkler/assets/video/remix-poster.webp" aria-label="Video: The Fire Wala team demonstrating the fire pump panel and running a hydrant flow test"></video>
-        </div>
-      </div>
-    </div>
-    <div class="spcs" id="pipeline">
-        <figure class="spc rv" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-pipe-painting.webp" data-cap="Pipes primed &amp; painted fire-red on site"><div class="ph"><img src="/hydrant-sprinkler/assets/sites/site-pipe-painting.webp" alt="Our technician painting hydrant pipes on site" loading="lazy" width="600" height="420"></div><figcaption><span class="tg">Fabrication</span><b>Pipes primed &amp; painted fire-red on site</b></figcaption></figure>
-        <figure class="spc rv" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-pump-room.webp" data-cap="Main &amp; jockey pumps with headers &amp; valves"><div class="ph"><img src="/hydrant-sprinkler/assets/sites/site-pump-room.webp" alt="Fire pump room with red pipeline, pumps and valves" loading="lazy" width="600" height="420"></div><figcaption><span class="tg">Pump Room</span><b>Main &amp; jockey pumps with headers &amp; valves</b></figcaption></figure>
-        <figure class="spc rv" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-wiring.webp" data-cap="Diesel pump &amp; controller wired for auto start"><div class="ph"><img src="/hydrant-sprinkler/assets/sites/site-wiring.webp" alt="Technician wiring the diesel fire pump and control panel" loading="lazy" width="600" height="420"></div><figcaption><span class="tg">Commissioning</span><b>Diesel pump &amp; controller wired for auto start</b></figcaption></figure>
-        <figure class="spc rv" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-team-checks.webp" data-cap="Pressure, valve &amp; pump checks before handover"><div class="ph"><img src="/hydrant-sprinkler/assets/sites/site-team-checks.webp" alt="The Fire Wala team doing checks in the pump room" loading="lazy" width="600" height="420"></div><figcaption><span class="tg">Testing</span><b>Pressure, valve &amp; pump checks before handover</b></figcaption></figure>
-        <figure class="spc rv" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-hose-reel.webp" data-cap="Hose reel &amp; hose cabinet ready at site"><div class="ph"><img src="/hydrant-sprinkler/assets/sites/site-hose-reel.webp" alt="Hose reel, landing valve and hose cabinet installed at a power substation" loading="lazy" width="600" height="420"></div><figcaption><span class="tg">Installed</span><b>Hose reel &amp; hose cabinet ready at site</b></figcaption></figure>
-    </div>
-    <div class="cta-row sites-cta rv"><a href="#enquiry" class="btn btn-o">Book FREE Site Survey</a></div>
-  </div>
-</section>
-<div class="lightbox" id="lightbox" hidden><button class="lb-x" aria-label="Close">×</button><figure><img alt=""><figcaption></figcaption></figure></div>
 
 <!-- TRUST -->
 <section class="sec" id="clients">
