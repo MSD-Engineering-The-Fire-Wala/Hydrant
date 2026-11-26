@@ -80,7 +80,7 @@ The current photos are free stock images from Unsplash (Unsplash License – fre
 | File | Used for |
 |---|---|
 | `img/hero-pipes.webp` | Hero background |
-| `proof/team-van.webp` | Hero "Our own trained team" card (from www.thefirewala.in) |
+| `sites/site-welding-team.webp` | Hero "Our own trained team" card and team section (van photos must not be used: old phone numbers) |
 | `img/ind-*.webp` | Industries we serve cards (Unsplash) |
 | `3d/*.svg` | 3D-style part illustrations, technician and process icons |
 

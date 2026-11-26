@@ -8,10 +8,10 @@
 <meta name="theme-color" content="#004890">
 <meta property="og:title" content="Fire Hydrant & Sprinkler Systems – FREE Site Survey | The Fire Wala">
 <meta property="og:description" content="NBC-compliant hydrant & sprinkler design, installation, testing and handover. FREE site survey, call-back within 24 hours.">
-<meta property="og:image" content="https://www.thefirewala.in/hydrant-sprinkler/assets/proof/team-van.webp">
-<meta property="og:url" content="https://www.thefirewala.in/hydrant-sprinkler/">
+<meta property="og:image" content="https://hydrantservice.vercel.app/hydrant-sprinkler/assets/sites/site-landing-valve.webp">
+<meta property="og:url" content="https://hydrantservice.vercel.app/hydrant-sprinkler/">
 <meta property="og:type" content="website">
-<link rel="canonical" href="https://www.thefirewala.in/hydrant-sprinkler/">
+<link rel="canonical" href="https://hydrantservice.vercel.app/hydrant-sprinkler/">
 <!-- Google Tag Manager (same container as www.thefirewala.in) -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KWG9BTJZ');</script>
 <link rel="icon" type="image/png" href="/hydrant-sprinkler/assets/img/favicon.png">
@@ -452,7 +452,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
 
 /* ===== Final CTA: blurred real team photo ===== */
 .final{position:relative;overflow:hidden}
-.final::before{content:"";position:absolute;inset:-24px;background:url('/hydrant-sprinkler/assets/proof/team-van.webp') center 30%/cover no-repeat;filter:blur(5px) saturate(.9);opacity:.28}
+.final::before{content:"";position:absolute;inset:-24px;background:url('/hydrant-sprinkler/assets/sites/site-landing-valve.webp') center 40%/cover no-repeat;filter:blur(5px) saturate(.9);opacity:.28}
 .final .wrap{position:relative;z-index:1}
 
 /* ===== Our work: video hero + photo cards ===== */
@@ -611,6 +611,30 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
 .proj .q span{font-style:normal;color:var(--muted);font-size:14px;border:0;padding:0;background:none;display:inline;box-shadow:none}
 .proj p{border:0}
 @media (max-width:900px){.spcs.spcs2{margin:0 -16px}.more-h{font-size:18px}}
+
+/* ===== Outcomes / NOC / Team ===== */
+.oc4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.oc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.oc i{font-style:normal;display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--cream);color:var(--orange);font-size:22px;font-weight:800;margin-bottom:12px}
+.oc h3{color:var(--navy);font-size:18px;margin-bottom:6px}
+.oc p{color:var(--muted);font-size:15px}
+.noc-wrap,.team-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
+.noc-note{font-size:14px;color:var(--muted);border-left:3px solid var(--teal);padding-left:12px}
+.noc{list-style:none;counter-reset:n;display:grid;gap:12px}
+.noc li{counter-increment:n;position:relative;background:var(--soft);border-radius:14px;padding:14px 16px 14px 60px}
+.noc li::before{content:counter(n);position:absolute;left:16px;top:16px;width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;display:grid;place-items:center}
+.noc li b{display:block;color:var(--navy)}
+.noc li span{color:var(--muted);font-size:15px}
+.team-ph img{width:100%;max-height:520px;object-fit:cover;object-position:center 30%;border-radius:var(--radius);box-shadow:var(--shadow)}
+.tl{list-style:none;display:grid;gap:8px;margin:4px 0 20px}
+.tl li{padding-left:22px;position:relative;font-size:15.5px}
+.tl li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:10px;border-radius:50%;background:var(--orange)}
+.tstats{display:flex;gap:14px;flex-wrap:wrap}
+.tstats div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 16px}
+.tstats b{display:block;color:var(--navy);font-size:20px}
+.tstats span{font-size:13px;color:var(--muted)}
+@media (max-width:1020px){.oc4{grid-template-columns:1fr 1fr}.noc-wrap,.team-wrap{grid-template-columns:minmax(0,1fr);gap:24px}.team-ph img{max-height:360px}}
+@media (max-width:720px){.oc4{grid-template-columns:1fr;gap:12px}}
 </style>
 </head>
 <body>
@@ -667,7 +691,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
         <a href="https://wa.me/917772078610?text=Hi%20The%20Fire%20Wala%2C%20I%20need%20a%20quote%20for%20Fire%20Hydrant%20%2F%20Sprinkler%20system." target="_blank" rel="noopener" class="btn btn-g" data-track="wa_hero"><svg><use href="#i-wa"/></svg>WhatsApp for Quote</a>
       </div>
       <div class="team-card hide-sm">
-        <img src="/hydrant-sprinkler/assets/proof/team-van.webp" alt="The Fire Wala team with service vehicle" width="1000" height="750">
+        <img src="/hydrant-sprinkler/assets/sites/site-welding-team.webp" alt="The Fire Wala technicians arriving at a project site with welding equipment" width="506" height="900" style="object-position:center 30%">
         <div><b>Our own trained team</b><span>Survey, installation, testing &amp; AMC — handled by The Fire Wala, Raipur. No sub-contracting.</span></div>
       </div>
     </div>
@@ -818,6 +842,23 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
   </div>
 </section>
 
+<!-- OUTCOMES: what the buyer actually cares about -->
+<section class="sec soft" id="outcomes">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">What you get</span>
+      <h2>Your money, your time, your safety — and your Fire NOC</h2>
+      <p>Four things every hydrant and sprinkler buyer worries about. Here is how we protect each one.</p>
+    </div>
+    <div class="oc4">
+      <div class="oc rv"><i>₹</i><h3>Your money</h3><p>Item-wise BOQ with material make, scope and exclusions written down — so you pay for what you need and compare quotes fairly.</p></div>
+      <div class="oc rv"><i>⏱</i><h3>Your time</h3><p>One in-house team for survey, supply, installation, testing and handover. No chasing five different vendors.</p></div>
+      <div class="oc rv"><i>🛡</i><h3>Your safety</h3><p>Hydro, pressure and pump tests before handover, and your staff trained to use the system in an emergency.</p></div>
+      <div class="oc rv"><i>📄</i><h3>Your Fire NOC</h3><p>System designed to NBC Part 4 and IS codes, with drawings, test reports and handover documents for your NOC file.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- COMPARE BEFORE YOU SIGN -->
 <section class="sec soft" id="compare">
   <div class="wrap qc-wrap">
@@ -944,6 +985,43 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
   </div>
 </section>
 <div class="lightbox" id="lightbox" hidden><button class="lb-x" aria-label="Close">×</button><figure><img alt=""><figcaption></figcaption></figure></div>
+
+<!-- FIRE NOC SUPPORT -->
+<section class="sec" id="noc">
+  <div class="wrap noc-wrap">
+    <div class="rv">
+      <span class="eyebrow">Fire NOC support</span>
+      <h2 class="qc-h">Your NOC is the real deadline. We plan the system around it.</h2>
+      <p class="qc-p">A hydrant or sprinkler system is only useful to you if it clears inspection and works in an emergency. That is why NOC requirements are part of our survey, design, testing and documents — not an afterthought.</p>
+      <p class="noc-note">Final approval is issued by the fire department and depends on the whole building. We make sure our scope is designed, installed, tested and documented properly.</p>
+    </div>
+    <ol class="noc rv">
+      <li><b>Requirement check</b><span>At the FREE survey: building type, height, area and existing system.</span></li>
+      <li><b>Design to norms</b><span>Layout and BOQ as per NBC Part 4 and the relevant IS codes.</span></li>
+      <li><b>Install &amp; test</b><span>Pump room, pipeline and outlets — then hydro, pressure and pump tests.</span></li>
+      <li><b>Documents for your NOC file</b><span>Layout drawing, test reports and handover documents.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- BIG IN-HOUSE TEAM -->
+<section class="sec soft" id="team">
+  <div class="wrap team-wrap">
+    <div class="team-ph rv"><img src="/hydrant-sprinkler/assets/sites/site-welding-team.webp" alt="The Fire Wala technicians arriving at a project site" loading="lazy" width="506" height="900"></div>
+    <div class="rv">
+      <span class="eyebrow">50+ people, one company</span>
+      <h2 class="qc-h">A big in-house team — working on your project</h2>
+      <p class="qc-p">Your project is not handed to a sub-contractor. The same company surveys, designs, supplies, installs, tests and maintains your system.</p>
+      <ul class="tl">
+        <li><b>Survey &amp; design</b> — site survey, layout and BOQ</li>
+        <li><b>Installation</b> — welding, pipeline, pump room and outlets</li>
+        <li><b>Testing &amp; handover</b> — tests, documents and staff training</li>
+        <li><b>Service &amp; AMC</b> — the same team after handover</li>
+      </ul>
+      <div class="tstats"><div><b>50+</b><span>in-house team</span></div><div><b>700+</b><span>clients served</span></div><div><b>Since 2016</b><span>ISO 9001:2015</span></div></div>
+    </div>
+  </div>
+</section>
 
 <!-- INDUSTRIES -->
 <section class="sec inds2-sec has-mini" id="industries">
