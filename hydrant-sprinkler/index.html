@@ -504,6 +504,53 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
 }
 @media (prefers-reduced-motion:reduce){.vtag i{animation:none}}
 
+
+/* ===== Brand (light-weight logo) ===== */
+.brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:#fff}
+.brand img{height:44px;width:auto}
+.brand span{display:flex;flex-direction:column;line-height:1.1}
+.brand small{font-size:10.5px;font-weight:500;letter-spacing:.04em;color:#cfe0f2}
+.brand b{font-size:18px;font-weight:600;letter-spacing:.06em}
+.brand sup{font-size:8px;font-weight:400;margin-left:1px}
+.brand em{font-style:normal;font-size:9.5px;font-weight:400;letter-spacing:.06em;color:#a9bdd4;margin-top:1px}
+.brand.foot{margin-bottom:12px}
+.brand.foot img{height:50px}
+/* ===== Final CTA numbers ===== */
+.nums.two{grid-template-columns:1fr 1fr;gap:10px}
+.nums.two .num.wa{grid-column:1/-1}
+.nums.two .num{padding:12px 14px;gap:12px}
+.nums.two .num i{width:40px;height:40px;border-radius:10px}
+.nums.two .num b{font-size:18px}
+/* ===== Reviews: compact ===== */
+.rev{padding:16px;gap:8px}
+.rev p{font-size:14px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.rev .av{width:34px;height:34px}
+@media (max-width:720px){
+  .hide-sm{display:none!important}
+  .hero h1{font-size:27px;margin-bottom:8px}
+  .hero .pills{margin:10px 0 12px;gap:6px}.hero .pill{font-size:11.5px;padding:5px 9px}
+  .ticks{gap:6px;margin-bottom:16px}.ticks li{font-size:14.5px}
+  .hero .cta-row{gap:8px}.hero .cta-row .btn{flex:1 1 0;padding:13px 8px;font-size:14px}
+  .stats .wrap{grid-template-columns:repeat(4,1fr)!important;padding:0 6px}
+  .stat,.stat:nth-child(odd),.stat:nth-child(n+3){padding:12px 2px;border:0!important;border-right:1px solid rgba(0,72,144,.2)!important;gap:2px}
+  .stat:last-child{border-right:0!important}
+  .stat b{font-size:20px}.stat span{font-size:8.5px;letter-spacing:.03em;line-height:1.25}
+  .work .head{margin-bottom:20px}
+  .tl{grid-template-columns:repeat(3,1fr)!important;gap:8px}
+  .st{flex-direction:column;align-items:center;text-align:center;padding:12px 6px 10px;gap:8px}
+  .st .ico{width:52px;height:52px;border-radius:14px}.st .ico img{width:40px;height:40px}
+  .st .ico::after{width:20px;height:20px;font-size:11px;top:-6px;right:-6px}
+  .st h3{font-size:12.5px;line-height:1.25}.st p{display:none}
+  .work .cta-row{margin-top:16px}.work .cta-row .btn{flex:1 1 0;padding:13px 8px;font-size:14px}
+  .revs{grid-template-columns:none!important;grid-auto-flow:column;grid-auto-columns:80%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:24px -16px 0;padding:0 16px 4px;scroll-padding:0 16px;gap:10px}
+  .revs::-webkit-scrollbar{display:none}
+  .rev{scroll-snap-align:start}
+  .final{padding:44px 0}.final h2{font-size:24px}.final p{margin-bottom:16px}
+  .nums.two .num{padding:10px;gap:8px}.nums.two .num i{width:34px;height:34px}.nums.two .num i svg{width:18px;height:18px}
+  .nums.two .num b{font-size:15px}.nums.two .num small{font-size:11px}
+  .brand img{height:38px}.brand b{font-size:16px}
+}
+
 /* ===== Trust ===== */
 .revs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
 
@@ -550,7 +597,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
 
 <header class="top">
   <div class="wrap">
-    <a href="#top" aria-label="The Fire Wala – MSD Engineering"><img class="logo-w" src="/hydrant-sprinkler/assets/img/logo-white.png" alt="MSD Engineering – The Fire Wala, ISO 9001:2015 certified" width="141" height="52"></a>
+    <a href="#top" class="brand" aria-label="The Fire Wala – MSD Engineering, ISO 9001:2015 certified"><img src="/hydrant-sprinkler/assets/img/flame.png" alt="" width="115" height="180"><span><small>MSD Engineering</small><b>THE FIRE WALA<sup>®</sup></b><em>ISO 9001:2015 Certified</em></span></a>
     <nav class="nav" aria-label="Sections">
       <a href="#services">Services</a>
       <a href="#industries">Industries</a>
@@ -570,18 +617,18 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
   <div class="wrap">
     <div>
       <h1>Fire Hydrant &amp; Sprinkler Systems — <span>designed, installed &amp; tested</span> to NBC norms</h1>
-      <p class="sub">One ISO-certified team for survey, design, pump room, pipeline, testing and handover — for hospitals, hotels, factories, warehouses and high-rise buildings.</p>
+      <p class="sub hide-sm">One ISO-certified team for survey, design, pump room, pipeline, testing and handover — for hospitals, hotels, factories, warehouses and high-rise buildings.</p>
       <div class="pills"><span class="pill">ISO 9001:2015</span><span class="pill">Since 2016</span><span class="pill">700+ Clients</span><span class="pill">NBC Part 4 · IS codes</span></div>
       <ul class="ticks">
         <li><svg><use href="#i-check-o"/></svg>FREE site survey · call-back within 24 hours</li>
         <li><svg><use href="#i-check-o"/></svg>Layout drawing, BOQ &amp; Fire NOC-ready documents</li>
-        <li><svg><use href="#i-check-o"/></svg>Hydro, pressure &amp; pump tests before handover</li>
+        <li class="hide-sm"><svg><use href="#i-check-o"/></svg>Hydro, pressure &amp; pump tests before handover</li>
       </ul>
       <div class="cta-row">
         <a href="tel:+917772078610" class="btn btn-o" data-track="call_hero"><svg><use href="#i-phone"/></svg>Call 77720 78610</a>
         <a href="https://wa.me/917772078610?text=Hi%20The%20Fire%20Wala%2C%20I%20need%20a%20quote%20for%20Fire%20Hydrant%20%2F%20Sprinkler%20system." target="_blank" rel="noopener" class="btn btn-g" data-track="wa_hero"><svg><use href="#i-wa"/></svg>WhatsApp for Quote</a>
       </div>
-      <div class="team-card">
+      <div class="team-card hide-sm">
         <img src="/hydrant-sprinkler/assets/proof/team-van.webp" alt="The Fire Wala team with service vehicle" width="1000" height="750">
         <div><b>Our own trained team</b><span>Survey, installation, testing &amp; AMC — handled by The Fire Wala, Raipur. No sub-contracting.</span></div>
       </div>
@@ -778,7 +825,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
       <p>Our own engineers and technicians at every step.</p>
     </div>
     <div class="work-grid">
-      <div class="tech rv">
+      <div class="tech rv hide-sm">
         <img src="/hydrant-sprinkler/assets/3d/technician.svg" alt="The Fire Wala technician installing a landing valve" width="420" height="460" loading="lazy">
         <div class="badge b1"><span>🛡️</span>ISO 9001:2015</div>
         <div class="badge b2"><span>👷</span>In-house team</div>
@@ -923,7 +970,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
       <p>Book a FREE site survey. Our team calls you within 24 hours.</p>
       <a href="#enquiry" class="btn btn-o">Book FREE Site Survey</a>
     </div>
-    <div class="nums rv">
+    <div class="nums rv two">
       <a class="num" href="tel:+917772078610" data-track="call_footer_1"><i><svg><use href="#i-phone"/></svg></i><span><small>Call us</small><b>77720 78610</b></span></a>
       <a class="num" href="tel:+917772070303" data-track="call_footer_2"><i><svg><use href="#i-phone"/></svg></i><span><small>Call us</small><b>77720 70303</b></span></a>
       <a class="num wa" href="https://wa.me/917772078610?text=Hi%20The%20Fire%20Wala%2C%20I%20need%20a%20quote%20for%20Fire%20Hydrant%20%2F%20Sprinkler%20system." target="_blank" rel="noopener" data-track="wa_footer"><i><svg><use href="#i-wa"/></svg></i><span><small>Chat on WhatsApp</small><b>77720 78610</b></span></a>
@@ -934,7 +981,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
 
 <footer>
   <div class="wrap">
-    <div><img src="/hydrant-sprinkler/assets/img/logo-white.png" alt="The Fire Wala" width="163" height="60" style="height:60px;width:auto;margin-bottom:10px"><p>We keep you &amp; your property safe from fire.</p></div>
+    <div><span class="brand foot"><img src="/hydrant-sprinkler/assets/img/flame.png" alt="" width="115" height="180"><span><small>MSD Engineering</small><b>THE FIRE WALA<sup>®</sup></b><em>ISO 9001:2015 Certified</em></span></span><p>We keep you &amp; your property safe from fire.</p></div>
     <div><h4>Our Services</h4><p>Fire Hydrant System · Fire Sprinkler System · Fire Alarm · Extinguisher Supply &amp; Refilling · AMC</p></div>
     <div><h4>Contact Us</h4><p><a href="tel:+917772078610">+91 77720 78610</a></p><p><a href="tel:+917772070303">+91 77720 70303</a></p><p><a href="mailto:info@thefirewala.com">info@thefirewala.com</a></p></div>
     <div><h4>Visit Us</h4><p>Office No. G04, Safoorah Complex, Parashuram Chowk, Stadium Road, in front of Kota, Raipur, Chhattisgarh – 492010</p></div>
