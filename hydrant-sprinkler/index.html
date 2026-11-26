@@ -449,67 +449,30 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
 .final::before{content:"";position:absolute;inset:-24px;background:url('/hydrant-sprinkler/assets/proof/team-van.webp') center 30%/cover no-repeat;filter:blur(5px) saturate(.9);opacity:.28}
 .final .wrap{position:relative;z-index:1}
 
-/* ===== Our work: horizontal pipeline ===== */
-.sites{background:linear-gradient(180deg,#fff,var(--soft))}
-.sites .head{margin-bottom:26px}
-.hpipe{position:relative}
-.htrack{overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab;outline:none;
-  mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
-.htrack::-webkit-scrollbar{display:none}
-.htrack.drag{cursor:grabbing;scroll-snap-type:none}
-.hrail{position:relative;display:flex;align-items:flex-start;gap:34px;width:max-content;padding:0 6vw 10px}
-.main{position:absolute;left:0;right:0;top:20px;height:20px;border-radius:10px;overflow:hidden;
-  background:linear-gradient(180deg,#ff6a57,#e02a1d 45%,#7d0c08);box-shadow:0 8px 18px rgba(125,12,8,.22)}
-.main .water{position:absolute;left:0;top:4px;bottom:4px;width:0;border-radius:6px;transition:width .25s linear;
-  background:repeating-linear-gradient(90deg,#38d4e3 0 14px,#00A0B0 14px 28px);background-size:28px 100%;animation:flowx .6s linear infinite;box-shadow:0 0 12px rgba(0,160,176,.8)}
-@keyframes flowx{to{background-position:28px 0}}
-.hstop{position:relative;flex:none;scroll-snap-align:center;padding-top:62px;display:flex;flex-direction:column;align-items:center}
-.hstop::before{content:"";position:absolute;top:30px;left:50%;width:12px;margin-left:-6px;height:40px;border-radius:0 0 6px 6px;
-  background:linear-gradient(90deg,#7d0c08,#ff5a47 40%,#e02a1d 60%,#7d0c08);transition:background .5s}
-.hvalve{position:absolute;top:12px;left:50%;margin-left:-18px;z-index:2;width:36px;height:36px;border-radius:50%;
-  background:radial-gradient(circle at 35% 30%,#fff,#aab2bc 60%,#5d646e);box-shadow:0 6px 14px rgba(0,0,0,.25);transition:transform .6s,box-shadow .5s}
-.hvalve::before{content:"";position:absolute;inset:6px;border-radius:50%;border:4px solid #e02a1d;
-  background:conic-gradient(from 0deg,transparent 0 40deg,#e02a1d 40deg 50deg,transparent 50deg 130deg,#e02a1d 130deg 140deg,transparent 140deg 220deg,#e02a1d 220deg 230deg,transparent 230deg 310deg,#e02a1d 310deg 320deg,transparent 320deg)}
-.hstop.wet .hvalve{transform:rotate(180deg);box-shadow:0 0 0 6px rgba(0,160,176,.25),0 0 20px rgba(0,160,176,.7)}
-.hstop.wet::before{background:linear-gradient(90deg,#00707b,#38d4e3 40%,#00A0B0 60%,#00707b)}
-.hstop .shot{position:relative;margin:0;background:#fff;padding:8px 8px 10px;border-radius:16px;box-shadow:0 16px 34px rgba(6,37,71,.18);cursor:zoom-in;
-  transition:transform .45s cubic-bezier(.2,1.2,.4,1),box-shadow .45s;outline:none}
-.hstop:nth-child(odd) .shot{transform:rotate(-1.6deg)}
-.hstop:nth-child(even) .shot{transform:rotate(1.6deg)}
-.hstop .shot:hover,.hstop .shot:focus-visible{transform:rotate(0) scale(1.03);box-shadow:0 24px 44px rgba(6,37,71,.26)}
-.hstop .shot img{display:block;height:300px;width:auto;border-radius:11px;user-select:none;-webkit-user-drag:none}
-.clamp{position:absolute;top:-11px;left:50%;transform:translateX(-50%);z-index:1;background:linear-gradient(180deg,#f4f6f8,#aab2bc);color:var(--navy-x);
-  font-size:11px;font-weight:800;letter-spacing:.12em;padding:4px 11px;border-radius:6px;box-shadow:0 4px 10px rgba(0,0,0,.18);white-space:nowrap}
-.hcap{display:flex;gap:10px;align-items:flex-start;margin-top:16px;max-width:300px;opacity:.6;transition:opacity .5s}
-.hstop.land .hcap{max-width:360px}
-.hstop.wet .hcap{opacity:1}
-.hcap .num{font-size:30px;font-weight:800;line-height:1;color:transparent;-webkit-text-stroke:1.6px var(--orange)}
-.hstop.wet .hcap .num{color:var(--orange)}
-.hcap h3{font-size:16px;color:var(--navy);margin-bottom:2px}
-.hcap p{font-size:13.5px;color:var(--muted);line-height:1.45}
-.hnav{position:absolute;top:180px;z-index:3;width:50px;height:50px;border-radius:50%;border:0;cursor:pointer;display:grid;place-items:center;
-  background:radial-gradient(circle at 35% 30%,#fff,#d6dbe3 65%,#8a929c);box-shadow:0 8px 20px rgba(6,37,71,.25);transition:transform .2s,opacity .2s}
-.hnav span{font-size:30px;line-height:1;color:var(--navy);margin-top:-3px;font-weight:700}
-.hnav:hover{transform:scale(1.08)}
-.hnav.prev{left:4px}.hnav.next{right:4px}
-.hnav[disabled]{opacity:.3;cursor:default;transform:none}
-.hhint{display:none;text-align:center;font-size:13px;color:var(--muted);margin-top:6px}
-.sites-cta{justify-content:center;margin-top:22px}
+/* ===== Our work: simple photo strip ===== */
+.sites{background:var(--soft)}
+.sites .head{margin-bottom:28px}
+.gtrack{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px;outline:none}
+.gtrack::-webkit-scrollbar{display:none}
+.gph{flex:none;margin:0;scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;cursor:zoom-in;transition:box-shadow .25s}
+.gph:hover,.gph:focus-visible{box-shadow:var(--shadow);outline:none}
+.gph{width:240px}.gph.land{width:460px}
+.gph img{display:block;height:300px;width:100%;object-fit:cover;user-select:none}
+.gph figcaption{padding:10px 14px 12px}
+.gph b{display:block;font-size:15px;color:var(--navy)}
+.gph span{font-size:13px;color:var(--muted)}
+.gnav{display:flex;justify-content:flex-end;gap:8px;margin-top:14px}
+.gnav button{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--navy);font-size:22px;line-height:1;cursor:pointer}
+.gnav button:hover:not([disabled]){border-color:var(--navy)}
+.gnav button[disabled]{opacity:.35;cursor:default}
+.sites-cta{justify-content:center;margin-top:18px}
 .lightbox{position:fixed;inset:0;z-index:100;background:rgba(6,20,40,.9);display:grid;place-items:center;padding:24px}
 .lightbox[hidden]{display:none}
 .lightbox figure{margin:0;max-width:min(1100px,96vw);text-align:center}
-.lightbox img{max-width:100%;max-height:80vh;border-radius:14px;box-shadow:0 30px 60px rgba(0,0,0,.5)}
-.lightbox figcaption{color:#fff;font-weight:700;margin-top:12px;font-size:16px}
+.lightbox img{max-width:100%;max-height:80vh;border-radius:12px}
+.lightbox figcaption{color:#fff;font-weight:600;margin-top:12px}
 .lb-x{position:absolute;top:14px;right:18px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:var(--navy);font-size:28px;line-height:1;cursor:pointer}
-@media (max-width:720px){
-  .hrail{gap:22px;padding:0 9vw 8px}
-  .hstop .shot img{height:240px}
-  .hstop.land .shot img{height:200px}
-  .hcap{max-width:250px}.hstop.land .hcap{max-width:310px}
-  .hnav{display:none}
-  .hhint{display:block}
-}
-@media (prefers-reduced-motion:reduce){.main .water{animation:none;transition:none}.hstop .shot,.hcap,.hvalve{transition:none}}
+@media (max-width:720px){.gph{width:200px}.gph.land{width:320px}.gph img{height:240px}.gtrack{gap:12px}}
 
 /* ===== Trust ===== */
 .revs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
@@ -811,43 +774,18 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
   <div class="wrap">
     <div class="head rv">
       <span class="eyebrow">From our sites</span>
-      <h2>Real hydrant &amp; pump room work — follow the pipeline</h2>
+      <h2>Real work by our team</h2>
       <p>Photos from our own projects, from the first pipe to a ready-to-use system.</p>
     </div>
-    <div class="hpipe" id="pipeline">
-      <button class="hnav prev" type="button" aria-label="Previous photo"><span>‹</span></button>
-      <div class="htrack" tabindex="0" aria-label="Project photos, scroll sideways">
-        <div class="hrail">
-          <div class="main" aria-hidden="true"><div class="water"></div></div>
-        <div class="hstop port">
-          <span class="hvalve" aria-hidden="true"></span>
-          <figure class="shot" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-pipe-painting.webp" data-cap="Fabrication &amp; painting"><span class="clamp">SITE 01</span><img src="/hydrant-sprinkler/assets/sites/site-pipe-painting.webp" alt="Our technician painting hydrant pipes on site" loading="lazy" width="900" height="1125" draggable="false"></figure>
-          <div class="hcap"><span class="num">01</span><div><h3>Fabrication &amp; painting</h3><p>MS pipes primed &amp; painted fire-red on site.</p></div></div>
-        </div>
-        <div class="hstop port">
-          <span class="hvalve" aria-hidden="true"></span>
-          <figure class="shot" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-pump-room.webp" data-cap="Pump room installation"><span class="clamp">SITE 02</span><img src="/hydrant-sprinkler/assets/sites/site-pump-room.webp" alt="Fire pump room with red pipeline, pumps and valves" loading="lazy" width="900" height="1125" draggable="false"></figure>
-          <div class="hcap"><span class="num">02</span><div><h3>Pump room installation</h3><p>Main &amp; jockey pumps, headers, valves &amp; bellows.</p></div></div>
-        </div>
-        <div class="hstop land">
-          <span class="hvalve" aria-hidden="true"></span>
-          <figure class="shot" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-wiring.webp" data-cap="Panel wiring &amp; commissioning"><span class="clamp">SITE 03</span><img src="/hydrant-sprinkler/assets/sites/site-wiring.webp" alt="Technician wiring the diesel fire pump and control panel" loading="lazy" width="1400" height="808" draggable="false"></figure>
-          <div class="hcap"><span class="num">03</span><div><h3>Panel wiring &amp; commissioning</h3><p>Diesel pump &amp; controller wired for auto start.</p></div></div>
-        </div>
-        <div class="hstop land">
-          <span class="hvalve" aria-hidden="true"></span>
-          <figure class="shot" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-team-checks.webp" data-cap="Testing &amp; site checks"><span class="clamp">SITE 04</span><img src="/hydrant-sprinkler/assets/sites/site-team-checks.webp" alt="The Fire Wala team doing checks in the pump room" loading="lazy" width="1400" height="655" draggable="false"></figure>
-          <div class="hcap"><span class="num">04</span><div><h3>Testing &amp; site checks</h3><p>Pressure, valves &amp; pump operation checked.</p></div></div>
-        </div>
-        <div class="hstop port">
-          <span class="hvalve" aria-hidden="true"></span>
-          <figure class="shot" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-hose-reel.webp" data-cap="Ready at site"><span class="clamp">SITE 05</span><img src="/hydrant-sprinkler/assets/sites/site-hose-reel.webp" alt="Hose reel, landing valve and hose cabinet installed at a power substation" loading="lazy" width="900" height="1125" draggable="false"></figure>
-          <div class="hcap"><span class="num">05</span><div><h3>Ready at site</h3><p>Hose reel, landing valve &amp; hose cabinet at a power substation.</p></div></div>
-        </div>
-        </div>
+    <div class="gal" id="pipeline">
+      <div class="gtrack" tabindex="0" aria-label="Project photos, scroll sideways">
+        <figure class="gph" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-pipe-painting.webp" data-cap="Fabrication &amp; painting"><img src="/hydrant-sprinkler/assets/sites/site-pipe-painting.webp" alt="Our technician painting hydrant pipes on site" loading="lazy" width="900" height="1125" draggable="false"><figcaption><b>Fabrication &amp; painting</b><span>MS pipes primed &amp; painted on site</span></figcaption></figure>
+        <figure class="gph" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-pump-room.webp" data-cap="Pump room installation"><img src="/hydrant-sprinkler/assets/sites/site-pump-room.webp" alt="Fire pump room with red pipeline, pumps and valves" loading="lazy" width="900" height="1125" draggable="false"><figcaption><b>Pump room installation</b><span>Main &amp; jockey pumps, headers &amp; valves</span></figcaption></figure>
+        <figure class="gph land" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-wiring.webp" data-cap="Panel wiring"><img src="/hydrant-sprinkler/assets/sites/site-wiring.webp" alt="Technician wiring the diesel fire pump and control panel" loading="lazy" width="1400" height="808" draggable="false"><figcaption><b>Panel wiring</b><span>Diesel pump &amp; controller for auto start</span></figcaption></figure>
+        <figure class="gph land" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-team-checks.webp" data-cap="Testing &amp; checks"><img src="/hydrant-sprinkler/assets/sites/site-team-checks.webp" alt="The Fire Wala team doing checks in the pump room" loading="lazy" width="1400" height="655" draggable="false"><figcaption><b>Testing &amp; checks</b><span>Pressure, valves &amp; pump operation</span></figcaption></figure>
+        <figure class="gph" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-hose-reel.webp" data-cap="Ready at site"><img src="/hydrant-sprinkler/assets/sites/site-hose-reel.webp" alt="Hose reel, landing valve and hose cabinet installed at a power substation" loading="lazy" width="900" height="1125" draggable="false"><figcaption><b>Ready at site</b><span>Hose reel &amp; hose cabinet installed</span></figcaption></figure>
       </div>
-      <button class="hnav next" type="button" aria-label="Next photo"><span>›</span></button>
-      <p class="hhint" aria-hidden="true">Swipe to follow the pipeline →</p>
+      <div class="gnav"><button class="prev" type="button" aria-label="Previous photo">‹</button><button class="next" type="button" aria-label="Next photo">›</button></div>
     </div>
     <div class="cta-row sites-cta rv"><a href="#enquiry" class="btn btn-o">Book FREE Site Survey</a></div>
   </div>
@@ -1093,38 +1031,18 @@ const CONFIG = {
   else fl.classList.remove('hide-q');
 
 
-  // Horizontal pipeline: water follows the sideways scroll
+  // Site photo strip
   const pl=document.getElementById('pipeline');
   if(pl){
-    const tr=pl.querySelector('.htrack'), water=pl.querySelector('.water'), stops=[...pl.querySelectorAll('.hstop')];
-    const prev=pl.querySelector('.prev'), next=pl.querySelector('.next');
-    const update=()=>{
-      const max=tr.scrollWidth-tr.clientWidth;
-      const prog=max>0?tr.scrollLeft/max:1;
-      const front=tr.scrollLeft+tr.clientWidth*(0.72+0.28*prog);  // water front (rail px); reaches the end at full scroll
-      const rail=pl.querySelector('.hrail').offsetWidth;
-      water.style.width=Math.min(100,front/rail*100)+'%';
-      stops.forEach(st=>st.classList.toggle('wet', st.offsetLeft+st.offsetWidth/2 < front));
-      prev.disabled=tr.scrollLeft<4; next.disabled=tr.scrollLeft>max-4;
-    };
-    let raf=0; tr.addEventListener('scroll',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(update);},{passive:true});
-    addEventListener('resize',update); addEventListener('load',update); update();
-    const step=dir=>{ const w=stops[0].offsetWidth+34; tr.scrollBy({left:dir*w,behavior:'smooth'}); };
+    const tr=pl.querySelector('.gtrack'), prev=pl.querySelector('.prev'), next=pl.querySelector('.next');
+    const upd=()=>{ const max=tr.scrollWidth-tr.clientWidth; prev.disabled=tr.scrollLeft<4; next.disabled=tr.scrollLeft>max-4; };
+    tr.addEventListener('scroll',upd,{passive:true}); addEventListener('resize',upd); addEventListener('load',upd); upd();
+    const step=d=>tr.scrollBy({left:d*tr.clientWidth*0.8,behavior:'smooth'});
     prev.addEventListener('click',()=>step(-1)); next.addEventListener('click',()=>step(1));
-    tr.addEventListener('keydown',e=>{ if(e.key==='ArrowRight'){e.preventDefault();step(1);} if(e.key==='ArrowLeft'){e.preventDefault();step(-1);} });
-    // mouse drag to scroll (desktop)
-    let down=false,sx=0,sl=0,moved=false;
-    tr.addEventListener('pointerdown',e=>{ if(e.pointerType!=='mouse')return; down=true;moved=false;sx=e.clientX;sl=tr.scrollLeft; });
-    addEventListener('pointermove',e=>{ if(!down)return; const dx=e.clientX-sx; if(Math.abs(dx)>4){moved=true;tr.classList.add('drag');} tr.scrollLeft=sl-dx; });
-    addEventListener('pointerup',()=>{ if(!down)return; down=false; tr.classList.remove('drag'); });
-    // Lightbox
     const lb=document.getElementById('lightbox'), lbImg=lb.querySelector('img'), lbCap=lb.querySelector('figcaption');
     const open=f=>{ lbImg.src=f.dataset.full; lbImg.alt=f.querySelector('img').alt; lbCap.innerHTML=f.dataset.cap; lb.hidden=false; lb.querySelector('.lb-x').focus(); };
     const close=()=>{ lb.hidden=true; lbImg.removeAttribute('src'); };
-    pl.querySelectorAll('.shot').forEach(f=>{
-      f.addEventListener('click',e=>{ if(moved){moved=false;return;} open(f); });
-      f.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){e.preventDefault();open(f);} });
-    });
+    pl.querySelectorAll('.gph').forEach(f=>{ f.addEventListener('click',()=>open(f)); f.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){e.preventDefault();open(f);} }); });
     lb.addEventListener('click',e=>{ if(e.target!==lbImg) close(); });
     addEventListener('keydown',e=>{ if(e.key==='Escape' && !lb.hidden) close(); });
   }
