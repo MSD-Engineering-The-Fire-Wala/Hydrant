@@ -262,7 +262,7 @@ h1,h2,h3,h4{line-height:1.2;letter-spacing:-.01em}
 .marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .track{display:flex;gap:14px;width:max-content;animation:scroll 55s linear infinite}
 .marquee:hover .track{animation-play-state:paused}
-.logo{width:118px;height:118px;flex:none;background:#fff;border:1px solid var(--line);border-radius:14px;display:grid;place-items:center;padding:10px}
+.logo{width:150px;height:150px;flex:none;background:#fff;border:1px solid var(--line);border-radius:14px;display:grid;place-items:center;padding:10px}
 .logo img{width:100%;height:100%;object-fit:contain}
 @keyframes scroll{to{transform:translateX(calc(-50% - 7px))}}
 
@@ -346,7 +346,13 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
   .team-card img{width:92px;height:68px}
   .form-card .fh{padding:20px 18px 4px}
   .form-card form{padding:14px 18px 20px}
-  .f-row{grid-template-columns:1fr;gap:0}
+  .f-row{grid-template-columns:1fr 1fr;gap:10px}
+  .field{margin-bottom:10px}
+  .field label{font-size:12px;margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .field input,.field select{font-size:14px;padding:10px 10px}
+  .field select{padding-right:26px;background-position:right 8px center}
+  .field textarea{min-height:46px;font-size:14px;padding:9px 10px}
+  .svc-opts .ib{height:40px}.svc-opts .ib img{height:38px}.svc-opts span{padding:8px 4px 7px}
   .stats .wrap{grid-template-columns:1fr 1fr;padding:0}
   .stat{flex-direction:column;gap:4px;text-align:center;padding:18px 8px;border-right:0;border-bottom:1.5px solid rgba(0,72,144,.2)}
   .stat:nth-child(odd){border-right:1.5px solid rgba(0,72,144,.2)}
@@ -366,7 +372,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
   .cmp th,.cmp td{padding:10px 8px}
   .cmp th{font-size:13px}
   .certs{gap:12px}
-  .logo{width:92px;height:92px}
+  .logo{width:118px;height:118px}
   footer .wrap{grid-template-columns:1fr}
   footer{padding-bottom:96px}
   .float{display:none}
@@ -449,6 +455,112 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
 .final::before{content:"";position:absolute;inset:-24px;background:url('/hydrant-sprinkler/assets/proof/team-van.webp') center 30%/cover no-repeat;filter:blur(5px) saturate(.9);opacity:.28}
 .final .wrap{position:relative;z-index:1}
 
+/* ===== Our work: video hero + photo cards ===== */
+.sites{background:#fff}
+.vhero{position:relative;display:grid;grid-template-columns:.72fr 1.28fr;align-items:center;gap:34px;padding:40px 40px 150px;
+  border-radius:24px;overflow:hidden;color:#fff;isolation:isolate;
+  background:radial-gradient(120% 90% at 80% 20%,#123c6e 0%,var(--navy-x) 60%)}
+.vhero::before{content:"";position:absolute;inset:0;z-index:-1;background:url('/hydrant-sprinkler/assets/video/remix-poster.webp') center/cover;filter:blur(30px);opacity:.25;transform:scale(1.2)}
+.vtag{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--peach)}
+.vtag i{width:8px;height:8px;border-radius:50%;background:#ff3b2a;box-shadow:0 0 0 4px rgba(255,59,42,.25);animation:rec 1.4s ease-in-out infinite}
+@keyframes rec{50%{opacity:.35}}
+.vcopy h2{font-size:clamp(28px,3.4vw,42px);font-weight:800;margin:12px 0 10px;line-height:1.12}
+.vcopy p{color:#c9d8ea;font-size:16px;margin-bottom:22px}
+.vtabs{display:grid;gap:10px}
+.vt{display:flex;gap:14px;align-items:flex-start;text-align:left;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:#fff;
+  border-radius:14px;padding:14px 16px;cursor:pointer;font:inherit;transition:background .3s,border-color .3s}
+.vt .n{font-size:20px;font-weight:800;color:rgba(255,255,255,.35);line-height:1.1}
+.vt b{display:block;font-size:15.5px}
+.vt small{display:block;color:#a9bdd4;font-size:13px;line-height:1.45;margin-top:2px}
+.vt.on{background:rgba(255,255,255,.14);border-color:var(--orange)}
+.vt.on .n{color:var(--orange)}
+.vbox{position:relative;aspect-ratio:16/10;border-radius:18px;overflow:hidden;background:#000;box-shadow:0 30px 60px rgba(0,0,0,.45)}
+.vslide{position:absolute;inset:0;opacity:0;transform:scale(1.06);transition:opacity .9s ease,transform 1.4s ease}
+.vslide.on{opacity:1;transform:none;z-index:1}
+.vslide .fill{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(14px) brightness(.6) saturate(1.2);transform:scale(1.15)}
+.vslide .main{position:absolute;top:0;bottom:0;left:50%;height:100%;width:auto;aspect-ratio:4/5;transform:translateX(-50%);object-fit:cover;object-position:50% 45%;box-shadow:0 0 40px rgba(0,0,0,.5)}
+.vbars{position:absolute;left:14px;right:14px;top:12px;z-index:3;display:flex;gap:6px}
+.vbars .bar{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.3);overflow:hidden}
+.vbars .bar i{display:block;height:100%;width:0;background:#fff}
+.spcs{position:relative;z-index:2;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:-118px 12px 0}
+.spc{margin:0;cursor:zoom-in;outline:none}
+.spc .ph{border-radius:14px;overflow:hidden;aspect-ratio:1/1.05;box-shadow:0 14px 30px rgba(6,37,71,.22);border:3px solid #fff;background:#ddd}
+.spc img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.spc:hover img,.spc:focus-visible img{transform:scale(1.06)}
+.spc figcaption{text-align:center;padding:10px 4px 0}
+.spc .tg{display:block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
+.spc b{display:block;font-size:14.5px;line-height:1.35;color:var(--ink);margin-top:3px}
+.sites-cta{justify-content:center;margin-top:30px}
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(6,20,40,.9);display:grid;place-items:center;padding:24px}
+.lightbox[hidden]{display:none}
+.lightbox figure{margin:0;max-width:min(1100px,96vw);text-align:center}
+.lightbox img{max-width:100%;max-height:80vh;border-radius:12px}
+.lightbox figcaption{color:#fff;font-weight:600;margin-top:12px}
+.lb-x{position:absolute;top:14px;right:18px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:var(--navy);font-size:28px;line-height:1;cursor:pointer}
+@media (max-width:900px){
+  .vhero{grid-template-columns:1fr;padding:26px 18px 120px;gap:20px}
+  .vbox{aspect-ratio:4/5}
+  .vtabs{grid-template-columns:1fr 1fr;gap:8px}
+  .vt{padding:10px 12px;gap:8px}.vt small{display:none}.vt b{font-size:13.5px}.vt .n{font-size:16px}
+  .vcopy p{margin-bottom:16px}
+  .spcs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:74%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:-90px -16px 0;padding:0 16px 6px;scroll-padding:0 16px}
+  .spcs::-webkit-scrollbar{display:none}
+  .spc{scroll-snap-align:start}
+  .spc .ph{aspect-ratio:4/3.4}
+}
+@media (prefers-reduced-motion:reduce){.vtag i{animation:none}}
+
+
+/* ===== Brand (light-weight logo) ===== */
+.brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:#fff}
+.brand img{height:44px;width:auto}
+.brand span{display:flex;flex-direction:column;line-height:1.1}
+.brand small{font-size:10.5px;font-weight:500;letter-spacing:.04em;color:#cfe0f2}
+.brand b{font-size:18px;font-weight:600;letter-spacing:.06em}
+.brand sup{font-size:8px;font-weight:400;margin-left:1px}
+.brand em{font-style:normal;font-size:9.5px;font-weight:400;letter-spacing:.06em;color:#a9bdd4;margin-top:1px}
+.brand.foot{margin-bottom:12px}
+.brand.foot img{height:50px}
+/* ===== Final CTA numbers ===== */
+.nums.two{grid-template-columns:1fr 1fr;gap:10px}
+.nums.two .num.wa{grid-column:1/-1}
+.nums.two .num{padding:12px 14px;gap:12px}
+.nums.two .num i{width:40px;height:40px;border-radius:10px}
+.nums.two .num b{font-size:18px}
+/* ===== Reviews: compact ===== */
+.rev{padding:16px;gap:8px}
+.rev p{font-size:14px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.rev .av{width:34px;height:34px}
+@media (max-width:720px){
+  .hide-sm{display:none!important}
+  #services .svc-copy{display:none}
+  #services .head{margin-bottom:18px}
+  #services .tabs{margin-bottom:8px}
+  #services .svc-grid{gap:0}
+  .hero h1{font-size:27px;margin-bottom:8px}
+  .hero .pills{margin:10px 0 12px;gap:6px}.hero .pill{font-size:11.5px;padding:5px 9px}
+  .ticks{gap:6px;margin-bottom:16px}.ticks li{font-size:14.5px}
+  .hero .cta-row{gap:8px}.hero .cta-row .btn{flex:1 1 0;padding:13px 8px;font-size:14px}
+  .stats .wrap{grid-template-columns:repeat(4,1fr)!important;padding:0 6px}
+  .stat,.stat:nth-child(odd),.stat:nth-child(n+3){padding:12px 2px;border:0!important;border-right:1px solid rgba(0,72,144,.2)!important;gap:2px}
+  .stat:last-child{border-right:0!important}
+  .stat b{font-size:20px}.stat span{font-size:8.5px;letter-spacing:.03em;line-height:1.25}
+  .work .head{margin-bottom:20px}
+  .tl{grid-template-columns:repeat(3,1fr)!important;gap:8px}
+  .st{flex-direction:column;align-items:center;text-align:center;padding:12px 6px 10px;gap:8px}
+  .st .ico{width:52px;height:52px;border-radius:14px}.st .ico img{width:40px;height:40px}
+  .st .ico::after{width:20px;height:20px;font-size:11px;top:-6px;right:-6px}
+  .st h3{font-size:12.5px;line-height:1.25}.st p{display:none}
+  .work .cta-row{margin-top:16px}.work .cta-row .btn{flex:1 1 0;padding:13px 8px;font-size:14px}
+  .revs{grid-template-columns:none!important;grid-auto-flow:column;grid-auto-columns:80%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:24px -16px 0;padding:0 16px 4px;scroll-padding:0 16px;gap:10px}
+  .revs::-webkit-scrollbar{display:none}
+  .rev{scroll-snap-align:start}
+  .final{padding:44px 0}.final h2{font-size:24px}.final p{margin-bottom:16px}
+  .nums.two .num{padding:10px;gap:8px}.nums.two .num i{width:34px;height:34px}.nums.two .num i svg{width:18px;height:18px}
+  .nums.two .num b{font-size:15px}.nums.two .num small{font-size:11px}
+  .brand img{height:38px}.brand b{font-size:16px}
+}
+
 /* ===== Trust ===== */
 .revs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
 
@@ -495,9 +607,10 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
 
 <header class="top">
   <div class="wrap">
-    <a href="#top" aria-label="The Fire Wala – MSD Engineering"><img class="logo-w" src="/hydrant-sprinkler/assets/img/logo-white.png" alt="MSD Engineering – The Fire Wala, ISO 9001:2015 certified" width="141" height="52"></a>
+    <a href="#top" class="brand" aria-label="The Fire Wala – MSD Engineering, ISO 9001:2015 certified"><img src="/hydrant-sprinkler/assets/img/flame.png" alt="" width="115" height="180"><span><small>MSD Engineering</small><b>THE FIRE WALA<sup>®</sup></b><em>ISO 9001:2015 Certified</em></span></a>
     <nav class="nav" aria-label="Sections">
       <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
       <a href="#industries">Industries</a>
       <a href="#process">How we work</a>
       <a href="#clients">Clients</a>
@@ -514,18 +627,18 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
   <div class="wrap">
     <div>
       <h1>Fire Hydrant &amp; Sprinkler Systems — <span>designed, installed &amp; tested</span> to NBC norms</h1>
-      <p class="sub">One ISO-certified team for survey, design, pump room, pipeline, testing and handover — for hospitals, hotels, factories, warehouses and high-rise buildings.</p>
+      <p class="sub hide-sm">One ISO-certified team for survey, design, pump room, pipeline, testing and handover — for hospitals, hotels, factories, warehouses and high-rise buildings.</p>
       <div class="pills"><span class="pill">ISO 9001:2015</span><span class="pill">Since 2016</span><span class="pill">700+ Clients</span><span class="pill">NBC Part 4 · IS codes</span></div>
       <ul class="ticks">
         <li><svg><use href="#i-check-o"/></svg>FREE site survey · call-back within 24 hours</li>
         <li><svg><use href="#i-check-o"/></svg>Layout drawing, BOQ &amp; Fire NOC-ready documents</li>
-        <li><svg><use href="#i-check-o"/></svg>Hydro, pressure &amp; pump tests before handover</li>
+        <li class="hide-sm"><svg><use href="#i-check-o"/></svg>Hydro, pressure &amp; pump tests before handover</li>
       </ul>
       <div class="cta-row">
         <a href="tel:+917772078610" class="btn btn-o" data-track="call_hero"><svg><use href="#i-phone"/></svg>Call 77720 78610</a>
         <a href="https://wa.me/917772078610?text=Hi%20The%20Fire%20Wala%2C%20I%20need%20a%20quote%20for%20Fire%20Hydrant%20%2F%20Sprinkler%20system." target="_blank" rel="noopener" class="btn btn-g" data-track="wa_hero"><svg><use href="#i-wa"/></svg>WhatsApp for Quote</a>
       </div>
-      <div class="team-card">
+      <div class="team-card hide-sm">
         <img src="/hydrant-sprinkler/assets/proof/team-van.webp" alt="The Fire Wala team with service vehicle" width="1000" height="750">
         <div><b>Our own trained team</b><span>Survey, installation, testing &amp; AMC — handled by The Fire Wala, Raipur. No sub-contracting.</span></div>
       </div>
@@ -554,7 +667,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
           </div>
           <div class="field" id="f-phone">
             <label for="phone">Mobile number <em>*</em></label>
-            <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10-digit mobile" maxlength="16">
+            <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10-digit no." maxlength="16">
             <div class="msg">Enter a valid 10-digit mobile number.</div>
           </div>
         </div>
@@ -692,6 +805,39 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
   </div>
 </section>
 
+<!-- OUR WORK: video hero + photo cards -->
+<section class="sec sites" id="work">
+  <div class="wrap">
+    <div class="vhero rv">
+      <div class="vcopy">
+        <span class="vtag"><i></i>From our sites</span>
+        <h2>Real work, real sites</h2>
+        <p>Short clips from our own hydrant projects — no stock footage.</p>
+        <div class="vtabs" role="tablist" aria-label="Site videos">
+          <button class="vt on" type="button" data-i="0"><span class="n">01</span><span><b>Pump panel demo &amp; handover</b><small>Our engineers walk the client through the fire pump panel — auto start, pressure and controls.</small></span></button>
+          <button class="vt" type="button" data-i="1"><span class="n">02</span><span><b>Hydrant flow test</b><small>Full-pressure hose test at a power substation before handover.</small></span></button>
+        </div>
+      </div>
+      <div class="vbox" id="vbox">
+        <div class="vbars" aria-hidden="true"><span class="bar"><i></i></span></div>
+        <div class="vslide on">
+          <video class="fill" muted loop playsinline preload="none" aria-hidden="true" data-src="/hydrant-sprinkler/assets/video/remix-bg.mp4" poster="/hydrant-sprinkler/assets/video/remix-poster.webp"></video>
+          <video class="main" muted loop playsinline preload="none" data-src="/hydrant-sprinkler/assets/video/remix.mp4" poster="/hydrant-sprinkler/assets/video/remix-poster.webp" aria-label="Video: The Fire Wala team demonstrating the fire pump panel and running a hydrant flow test"></video>
+        </div>
+      </div>
+    </div>
+    <div class="spcs" id="pipeline">
+        <figure class="spc rv" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-pipe-painting.webp" data-cap="Pipes primed &amp; painted fire-red on site"><div class="ph"><img src="/hydrant-sprinkler/assets/sites/site-pipe-painting.webp" alt="Our technician painting hydrant pipes on site" loading="lazy" width="600" height="420"></div><figcaption><span class="tg">Fabrication</span><b>Pipes primed &amp; painted fire-red on site</b></figcaption></figure>
+        <figure class="spc rv" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-pump-room.webp" data-cap="Main &amp; jockey pumps with headers &amp; valves"><div class="ph"><img src="/hydrant-sprinkler/assets/sites/site-pump-room.webp" alt="Fire pump room with red pipeline, pumps and valves" loading="lazy" width="600" height="420"></div><figcaption><span class="tg">Pump Room</span><b>Main &amp; jockey pumps with headers &amp; valves</b></figcaption></figure>
+        <figure class="spc rv" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-wiring.webp" data-cap="Diesel pump &amp; controller wired for auto start"><div class="ph"><img src="/hydrant-sprinkler/assets/sites/site-wiring.webp" alt="Technician wiring the diesel fire pump and control panel" loading="lazy" width="600" height="420"></div><figcaption><span class="tg">Commissioning</span><b>Diesel pump &amp; controller wired for auto start</b></figcaption></figure>
+        <figure class="spc rv" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-team-checks.webp" data-cap="Pressure, valve &amp; pump checks before handover"><div class="ph"><img src="/hydrant-sprinkler/assets/sites/site-team-checks.webp" alt="The Fire Wala team doing checks in the pump room" loading="lazy" width="600" height="420"></div><figcaption><span class="tg">Testing</span><b>Pressure, valve &amp; pump checks before handover</b></figcaption></figure>
+        <figure class="spc rv" tabindex="0" data-full="/hydrant-sprinkler/assets/sites/site-hose-reel.webp" data-cap="Hose reel &amp; hose cabinet ready at site"><div class="ph"><img src="/hydrant-sprinkler/assets/sites/site-hose-reel.webp" alt="Hose reel, landing valve and hose cabinet installed at a power substation" loading="lazy" width="600" height="420"></div><figcaption><span class="tg">Installed</span><b>Hose reel &amp; hose cabinet ready at site</b></figcaption></figure>
+    </div>
+    <div class="cta-row sites-cta rv"><a href="#enquiry" class="btn btn-o">Book FREE Site Survey</a></div>
+  </div>
+</section>
+<div class="lightbox" id="lightbox" hidden><button class="lb-x" aria-label="Close">×</button><figure><img alt=""><figcaption></figcaption></figure></div>
+
 <!-- INDUSTRIES -->
 <section class="sec inds2-sec has-mini" id="industries">
   <img class="mini hose" src="/hydrant-sprinkler/assets/3d/mini-hose.svg" alt="" aria-hidden="true" width="240" height="200" loading="lazy">
@@ -722,7 +868,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
       <p>Our own engineers and technicians at every step.</p>
     </div>
     <div class="work-grid">
-      <div class="tech rv">
+      <div class="tech rv hide-sm">
         <img src="/hydrant-sprinkler/assets/3d/technician.svg" alt="The Fire Wala technician installing a landing valve" width="420" height="460" loading="lazy">
         <div class="badge b1"><span>🛡️</span>ISO 9001:2015</div>
         <div class="badge b2"><span>👷</span>In-house team</div>
@@ -742,6 +888,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
     </div>
   </div>
 </section>
+
 
 <!-- TRUST -->
 <section class="sec" id="clients">
@@ -834,7 +981,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
       <p>Book a FREE site survey. Our team calls you within 24 hours.</p>
       <a href="#enquiry" class="btn btn-o">Book FREE Site Survey</a>
     </div>
-    <div class="nums rv">
+    <div class="nums rv two">
       <a class="num" href="tel:+917772078610" data-track="call_footer_1"><i><svg><use href="#i-phone"/></svg></i><span><small>Call us</small><b>77720 78610</b></span></a>
       <a class="num" href="tel:+917772070303" data-track="call_footer_2"><i><svg><use href="#i-phone"/></svg></i><span><small>Call us</small><b>77720 70303</b></span></a>
       <a class="num wa" href="https://wa.me/917772078610?text=Hi%20The%20Fire%20Wala%2C%20I%20need%20a%20quote%20for%20Fire%20Hydrant%20%2F%20Sprinkler%20system." target="_blank" rel="noopener" data-track="wa_footer"><i><svg><use href="#i-wa"/></svg></i><span><small>Chat on WhatsApp</small><b>77720 78610</b></span></a>
@@ -845,7 +992,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
 
 <footer>
   <div class="wrap">
-    <div><img src="/hydrant-sprinkler/assets/img/logo-white.png" alt="The Fire Wala" width="163" height="60" style="height:60px;width:auto;margin-bottom:10px"><p>We keep you &amp; your property safe from fire.</p></div>
+    <div><span class="brand foot"><img src="/hydrant-sprinkler/assets/img/flame.png" alt="" width="115" height="180"><span><small>MSD Engineering</small><b>THE FIRE WALA<sup>®</sup></b><em>ISO 9001:2015 Certified</em></span></span><p>We keep you &amp; your property safe from fire.</p></div>
     <div><h4>Our Services</h4><p>Fire Hydrant System · Fire Sprinkler System · Fire Alarm · Extinguisher Supply &amp; Refilling · AMC</p></div>
     <div><h4>Contact Us</h4><p><a href="tel:+917772078610">+91 77720 78610</a></p><p><a href="tel:+917772070303">+91 77720 70303</a></p><p><a href="mailto:info@thefirewala.com">info@thefirewala.com</a></p></div>
     <div><h4>Visit Us</h4><p>Office No. G04, Safoorah Complex, Parashuram Chowk, Stadium Road, in front of Kota, Raipur, Chhattisgarh – 492010</p></div>
@@ -980,6 +1127,38 @@ const CONFIG = {
   const fl=document.querySelector('.float'), fc=document.getElementById('enquiry');
   if('IntersectionObserver' in window) new IntersectionObserver(es=>es.forEach(e=>fl.classList.toggle('hide-q',e.isIntersecting))).observe(fc);
   else fl.classList.remove('hide-q');
+
+
+  // Our work: one muted remix video (pump panel demo + hydrant flow test); tabs follow the clip on screen
+  const vbox=document.getElementById('vbox');
+  if(vbox){
+    const vids=[...vbox.querySelectorAll('video')], main=vbox.querySelector('.main'), fill=vbox.querySelector('.fill'), bar=vbox.querySelector('.bar i'), tabs=[...document.querySelectorAll('.vt')];
+    const flow=[[6.25,8.25],[14.75,16.75],[20.25,22.25]];               // seconds in remix.mp4 that show the hydrant flow test clips
+    const stills=[[0,2.75],[11.75,14.75]];                              // site photos (team arriving, pump room) – no tab highlighted
+    const jump=[2.9,6.4];
+    let raf=0;
+    const tick=()=>{ const t=main.currentTime;
+      if(main.duration) bar.style.width=(t/main.duration*100)+'%';
+      const inR=r=>r.some(([a,b])=>t>=a&&t<b);
+      const k=inR(stills)?-1:inR(flow)?1:0;
+      tabs.forEach((x,i)=>{ x.classList.toggle('on',i===k); x.setAttribute('aria-selected',i===k); });
+      if(fill.duration && Math.abs(fill.currentTime-t)>.4) fill.currentTime=t;
+      raf=requestAnimationFrame(tick); };
+    tabs.forEach((x,i)=>x.addEventListener('click',()=>{ main.currentTime=jump[i]; fill.currentTime=jump[i]; }));
+    const start=()=>{ vids.forEach(v=>{ if(!v.src) v.src=v.dataset.src; v.play().catch(()=>{}); }); cancelAnimationFrame(raf); tick(); };
+    const stop=()=>{ vids.forEach(v=>v.pause()); cancelAnimationFrame(raf); };
+    if('IntersectionObserver' in window) new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?start():stop()),{threshold:.25}).observe(vbox);
+    else start();
+  }
+  const pl=document.getElementById('pipeline');
+  if(pl){
+    const lb=document.getElementById('lightbox'), lbImg=lb.querySelector('img'), lbCap=lb.querySelector('figcaption');
+    const open=f=>{ lbImg.src=f.dataset.full; lbImg.alt=f.querySelector('img').alt; lbCap.innerHTML=f.dataset.cap; lb.hidden=false; lb.querySelector('.lb-x').focus(); };
+    const close=()=>{ lb.hidden=true; lbImg.removeAttribute('src'); };
+    pl.querySelectorAll('.spc').forEach(f=>{ f.addEventListener('click',()=>open(f)); f.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){e.preventDefault();open(f);} }); });
+    lb.addEventListener('click',e=>{ if(e.target!==lbImg) close(); });
+    addEventListener('keydown',e=>{ if(e.key==='Escape' && !lb.hidden) close(); });
+  }
 
   // 3D parts pop in when the stage is visible
   const stages=[...document.querySelectorAll('.stage')];
