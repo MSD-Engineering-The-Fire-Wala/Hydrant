@@ -454,7 +454,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
 .vhero{position:relative;display:grid;grid-template-columns:.72fr 1.28fr;align-items:center;gap:34px;padding:40px 40px 150px;
   border-radius:24px;overflow:hidden;color:#fff;isolation:isolate;
   background:radial-gradient(120% 90% at 80% 20%,#123c6e 0%,var(--navy-x) 60%)}
-.vhero::before{content:"";position:absolute;inset:0;z-index:-1;background:url('/hydrant-sprinkler/assets/video/flow-test-poster.webp') center/cover;filter:blur(30px);opacity:.25;transform:scale(1.2)}
+.vhero::before{content:"";position:absolute;inset:0;z-index:-1;background:url('/hydrant-sprinkler/assets/video/remix-poster.webp') center/cover;filter:blur(30px);opacity:.25;transform:scale(1.2)}
 .vtag{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--peach)}
 .vtag i{width:8px;height:8px;border-radius:50%;background:#ff3b2a;box-shadow:0 0 0 4px rgba(255,59,42,.25);animation:rec 1.4s ease-in-out infinite}
 @keyframes rec{50%{opacity:.35}}
@@ -813,15 +813,11 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
         </div>
       </div>
       <div class="vbox" id="vbox">
-        <div class="vbars" aria-hidden="true"><span class="bar" data-i="0"><i></i></span><span class="bar" data-i="1"><i></i></span></div>
-          <div class="vslide on" data-i="0">
-            <video class="fill" muted playsinline preload="none" aria-hidden="true" data-src="/hydrant-sprinkler/assets/video/site-demo-bg.mp4" poster="/hydrant-sprinkler/assets/video/site-demo-poster.webp"></video>
-            <video class="main" muted playsinline preload="none" data-src="/hydrant-sprinkler/assets/video/site-demo.mp4" poster="/hydrant-sprinkler/assets/video/site-demo-poster.webp" aria-label="Video: The Fire Wala team demonstrating the fire pump control panel at a client site"></video>
-          </div>
-          <div class="vslide" data-i="1">
-            <video class="fill" muted playsinline preload="none" aria-hidden="true" data-src="/hydrant-sprinkler/assets/video/flow-test-bg.mp4" poster="/hydrant-sprinkler/assets/video/flow-test-poster.webp"></video>
-            <video class="main" muted playsinline preload="none" data-src="/hydrant-sprinkler/assets/video/flow-test.mp4" poster="/hydrant-sprinkler/assets/video/flow-test-poster.webp" aria-label="Video: The Fire Wala team running a hydrant hose flow test at a power substation"></video>
-          </div>
+        <div class="vbars" aria-hidden="true"><span class="bar"><i></i></span></div>
+        <div class="vslide on">
+          <video class="fill" muted loop playsinline preload="none" aria-hidden="true" data-src="/hydrant-sprinkler/assets/video/remix-bg.mp4" poster="/hydrant-sprinkler/assets/video/remix-poster.webp"></video>
+          <video class="main" muted loop playsinline preload="none" data-src="/hydrant-sprinkler/assets/video/remix.mp4" poster="/hydrant-sprinkler/assets/video/remix-poster.webp" aria-label="Video: The Fire Wala team demonstrating the fire pump panel and running a hydrant flow test"></video>
+        </div>
       </div>
     </div>
     <div class="spcs" id="pipeline">
@@ -1075,28 +1071,22 @@ const CONFIG = {
   else fl.classList.remove('hide-q');
 
 
-  // Our work: two muted site videos in one box, crossfading one after the other
+  // Our work: one muted remix video (pump panel demo + hydrant flow test); tabs follow the clip on screen
   const vbox=document.getElementById('vbox');
   if(vbox){
-    const slides=[...vbox.querySelectorAll('.vslide')], tabs=[...document.querySelectorAll('.vt')], bars=[...vbox.querySelectorAll('.bar i')];
-    let cur=0, visible=false, raf=0;
-    const vids=sl=>[...sl.querySelectorAll('video')];
-    const ensure=sl=>vids(sl).forEach(v=>{ if(!v.src) v.src=v.dataset.src; });
-    const tick=()=>{ const m=slides[cur].querySelector('.main'); if(m.duration) bars[cur].style.width=(m.currentTime/m.duration*100)+'%'; raf=requestAnimationFrame(tick); };
-    const show=i=>{
-      slides.forEach((sl,k)=>{ sl.classList.toggle('on',k===i); if(k!==i) vids(sl).forEach(v=>v.pause()); });
-      tabs.forEach((t,k)=>{ t.classList.toggle('on',k===i); t.setAttribute('aria-selected',k===i); });
-      bars.forEach((b,k)=>b.style.width=k<i?'100%':'0');
-      cur=i; ensure(slides[i]); ensure(slides[(i+1)%slides.length]);
-      if(visible) vids(slides[i]).forEach(v=>{ v.currentTime=0; v.play().catch(()=>{}); });
-    };
-    slides.forEach((sl,k)=>{ const m=sl.querySelector('.main'), f=sl.querySelector('.fill');
-      m.addEventListener('ended',()=>show((k+1)%slides.length));
-      m.addEventListener('timeupdate',()=>{ if(f.duration && Math.abs(f.currentTime-m.currentTime%f.duration)>.4) f.currentTime=m.currentTime%f.duration; });
-    });
-    tabs.forEach((t,k)=>t.addEventListener('click',()=>show(k)));
-    const start=()=>{ visible=true; ensure(slides[cur]); vids(slides[cur]).forEach(v=>v.play().catch(()=>{})); cancelAnimationFrame(raf); tick(); };
-    const stop=()=>{ visible=false; slides.forEach(sl=>vids(sl).forEach(v=>v.pause())); cancelAnimationFrame(raf); };
+    const vids=[...vbox.querySelectorAll('video')], main=vbox.querySelector('.main'), fill=vbox.querySelector('.fill'), bar=vbox.querySelector('.bar i'), tabs=[...document.querySelectorAll('.vt')];
+    const flow=[[3.75,5.75],[9.25,11.25],[14.75,16.75]];                // seconds in remix.mp4 that show the hydrant flow test clips
+    const jump=[0.2,3.9];
+    let raf=0;
+    const tick=()=>{ const t=main.currentTime;
+      if(main.duration) bar.style.width=(t/main.duration*100)+'%';
+      const k=flow.some(([a,b])=>t>=a&&t<b)?1:0;
+      tabs.forEach((x,i)=>{ x.classList.toggle('on',i===k); x.setAttribute('aria-selected',i===k); });
+      if(fill.duration && Math.abs(fill.currentTime-t)>.4) fill.currentTime=t;
+      raf=requestAnimationFrame(tick); };
+    tabs.forEach((x,i)=>x.addEventListener('click',()=>{ main.currentTime=jump[i]; fill.currentTime=jump[i]; }));
+    const start=()=>{ vids.forEach(v=>{ if(!v.src) v.src=v.dataset.src; v.play().catch(()=>{}); }); cancelAnimationFrame(raf); tick(); };
+    const stop=()=>{ vids.forEach(v=>v.pause()); cancelAnimationFrame(raf); };
     if('IntersectionObserver' in window) new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?start():stop()),{threshold:.25}).observe(vbox);
     else start();
   }
