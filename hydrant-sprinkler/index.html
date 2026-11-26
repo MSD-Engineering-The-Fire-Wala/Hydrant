@@ -1075,12 +1075,14 @@ const CONFIG = {
   const vbox=document.getElementById('vbox');
   if(vbox){
     const vids=[...vbox.querySelectorAll('video')], main=vbox.querySelector('.main'), fill=vbox.querySelector('.fill'), bar=vbox.querySelector('.bar i'), tabs=[...document.querySelectorAll('.vt')];
-    const flow=[[3.75,5.75],[9.25,11.25],[14.75,16.75]];                // seconds in remix.mp4 that show the hydrant flow test clips
-    const jump=[0.2,3.9];
+    const flow=[[6.25,8.25],[14.75,16.75],[20.25,22.25]];               // seconds in remix.mp4 that show the hydrant flow test clips
+    const stills=[[0,2.75],[11.75,14.75]];                              // site photos (team arriving, pump room) – no tab highlighted
+    const jump=[2.9,6.4];
     let raf=0;
     const tick=()=>{ const t=main.currentTime;
       if(main.duration) bar.style.width=(t/main.duration*100)+'%';
-      const k=flow.some(([a,b])=>t>=a&&t<b)?1:0;
+      const inR=r=>r.some(([a,b])=>t>=a&&t<b);
+      const k=inR(stills)?-1:inR(flow)?1:0;
       tabs.forEach((x,i)=>{ x.classList.toggle('on',i===k); x.setAttribute('aria-selected',i===k); });
       if(fill.duration && Math.abs(fill.currentTime-t)>.4) fill.currentTime=t;
       raf=requestAnimationFrame(tick); };

@@ -38,7 +38,7 @@ Short, services-focused page styled like www.thefirewala.in.
 3. Stats strip – 10+ years, 700+ clients, 50+ team, 24-hr call-back
 4. **Services** – Fire Hydrant / Fire Sprinkler tabs with **3D pop-up parts** (`assets/3d/*.svg`: yard hydrant, fire pump, landing valve, hose reel, gauge, sprinkler head, alarm valve)
 4b. **Industries we serve** – 8 photo cards (hospitals, schools, factories, residential, hotels, malls, warehouses, offices)
-4c. **Our work** – wide video box with one muted remix (`assets/video/remix.mp4`, ~20 s: alternating clips from the pump panel demo and the hydrant flow test with fade/slide/wipe/circle/zoom transitions), looping; tabs highlight the clip on screen; 5 big site photo cards overlap the banner edge
+4c. **Our work** – wide video box with one muted remix (`assets/video/remix.mp4`, ~26 s: team-arrival photo, then alternating clips from the pump panel demo and the hydrant flow test plus a panning pump-room photo with fade/slide/wipe/circle/zoom transitions), looping; tabs highlight the clip on screen; 5 big site photo cards overlap the banner edge
 5. **How we work** – 3D technician illustration + 6 steps with 3D icons
 6. Trusted by – auto-scrolling client logos + 3 Google reviews
 7. FAQ (4) · final call section · footer
