@@ -451,30 +451,39 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
 
 /* ===== Our work: video hero + photo cards ===== */
 .sites{background:#fff}
-.vhero{position:relative;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:30px;min-height:500px;padding:46px 56px 140px;
-  border-radius:24px;overflow:hidden;background:var(--navy-x);color:#fff;isolation:isolate}
-.vbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;filter:blur(18px) saturate(1.1);transform:scale(1.15)}
-.vhero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(6,22,44,.94) 0%,rgba(6,22,44,.78) 45%,rgba(6,22,44,.35) 100%),linear-gradient(0deg,rgba(6,22,44,.85),rgba(6,22,44,0) 45%)}
+.vhero{position:relative;display:grid;grid-template-columns:.72fr 1.28fr;align-items:center;gap:34px;padding:40px 40px 150px;
+  border-radius:24px;overflow:hidden;color:#fff;isolation:isolate;
+  background:radial-gradient(120% 90% at 80% 20%,#123c6e 0%,var(--navy-x) 60%)}
+.vhero::before{content:"";position:absolute;inset:0;z-index:-1;background:url('/hydrant-sprinkler/assets/video/flow-test-poster.webp') center/cover;filter:blur(30px);opacity:.25;transform:scale(1.2)}
 .vtag{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--peach)}
 .vtag i{width:8px;height:8px;border-radius:50%;background:#ff3b2a;box-shadow:0 0 0 4px rgba(255,59,42,.25);animation:rec 1.4s ease-in-out infinite}
 @keyframes rec{50%{opacity:.35}}
-.vcopy h2{font-size:clamp(28px,3.6vw,44px);font-weight:800;margin:12px 0 12px;line-height:1.12;max-width:520px}
-.vcopy p{color:#c9d8ea;font-size:16.5px;max-width:480px;margin-bottom:22px}
-.vplay{display:inline-flex;align-items:center;gap:12px;background:none;border:0;color:#fff;font:700 15.5px var(--font);cursor:pointer;padding:0}
-.vplay .pi{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--orange);font-size:15px;padding-left:3px;box-shadow:0 0 0 8px rgba(232,112,16,.22);transition:transform .2s}
-.vplay:hover .pi{transform:scale(1.08)}
-.vframe{position:relative;justify-self:center;width:min(100%,250px);aspect-ratio:9/16;border-radius:20px;overflow:hidden;
-  box-shadow:0 30px 60px rgba(0,0,0,.5),0 0 0 6px rgba(255,255,255,.08);background:#000}
-.vframe video{width:100%;height:100%;object-fit:cover;display:block}
-.vmute{position:absolute;right:10px;bottom:10px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;font-size:16px;cursor:pointer}
-.spcs{position:relative;z-index:2;display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin:-104px 28px 0}
+.vcopy h2{font-size:clamp(28px,3.4vw,42px);font-weight:800;margin:12px 0 10px;line-height:1.12}
+.vcopy p{color:#c9d8ea;font-size:16px;margin-bottom:22px}
+.vtabs{display:grid;gap:10px}
+.vt{display:flex;gap:14px;align-items:flex-start;text-align:left;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:#fff;
+  border-radius:14px;padding:14px 16px;cursor:pointer;font:inherit;transition:background .3s,border-color .3s}
+.vt .n{font-size:20px;font-weight:800;color:rgba(255,255,255,.35);line-height:1.1}
+.vt b{display:block;font-size:15.5px}
+.vt small{display:block;color:#a9bdd4;font-size:13px;line-height:1.45;margin-top:2px}
+.vt.on{background:rgba(255,255,255,.14);border-color:var(--orange)}
+.vt.on .n{color:var(--orange)}
+.vbox{position:relative;aspect-ratio:16/10;border-radius:18px;overflow:hidden;background:#000;box-shadow:0 30px 60px rgba(0,0,0,.45)}
+.vslide{position:absolute;inset:0;opacity:0;transform:scale(1.06);transition:opacity .9s ease,transform 1.4s ease}
+.vslide.on{opacity:1;transform:none;z-index:1}
+.vslide .fill{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(14px) brightness(.6) saturate(1.2);transform:scale(1.15)}
+.vslide .main{position:absolute;top:0;bottom:0;left:50%;height:100%;width:auto;aspect-ratio:4/5;transform:translateX(-50%);object-fit:cover;object-position:50% 45%;box-shadow:0 0 40px rgba(0,0,0,.5)}
+.vbars{position:absolute;left:14px;right:14px;top:12px;z-index:3;display:flex;gap:6px}
+.vbars .bar{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.3);overflow:hidden}
+.vbars .bar i{display:block;height:100%;width:0;background:#fff}
+.spcs{position:relative;z-index:2;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:-118px 12px 0}
 .spc{margin:0;cursor:zoom-in;outline:none}
-.spc .ph{border-radius:12px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 14px 30px rgba(6,37,71,.22);border:3px solid #fff;background:#ddd}
+.spc .ph{border-radius:14px;overflow:hidden;aspect-ratio:1/1.05;box-shadow:0 14px 30px rgba(6,37,71,.22);border:3px solid #fff;background:#ddd}
 .spc img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
 .spc:hover img,.spc:focus-visible img{transform:scale(1.06)}
 .spc figcaption{text-align:center;padding:10px 4px 0}
 .spc .tg{display:block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
-.spc b{display:block;font-size:14px;line-height:1.35;color:var(--ink);margin-top:3px}
+.spc b{display:block;font-size:14.5px;line-height:1.35;color:var(--ink);margin-top:3px}
 .sites-cta{justify-content:center;margin-top:30px}
 .lightbox{position:fixed;inset:0;z-index:100;background:rgba(6,20,40,.9);display:grid;place-items:center;padding:24px}
 .lightbox[hidden]{display:none}
@@ -483,11 +492,15 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
 .lightbox figcaption{color:#fff;font-weight:600;margin-top:12px}
 .lb-x{position:absolute;top:14px;right:18px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:var(--navy);font-size:28px;line-height:1;cursor:pointer}
 @media (max-width:900px){
-  .vhero{grid-template-columns:1fr;padding:30px 22px 120px;gap:22px;min-height:0;text-align:left}
-  .vframe{width:min(70%,240px)}
-  .spcs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:62%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:-90px -16px 0;padding:0 16px 6px;scroll-padding:0 16px}
+  .vhero{grid-template-columns:1fr;padding:26px 18px 120px;gap:20px}
+  .vbox{aspect-ratio:4/5}
+  .vtabs{grid-template-columns:1fr 1fr;gap:8px}
+  .vt{padding:10px 12px;gap:8px}.vt small{display:none}.vt b{font-size:13.5px}.vt .n{font-size:16px}
+  .vcopy p{margin-bottom:16px}
+  .spcs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:74%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:-90px -16px 0;padding:0 16px 6px;scroll-padding:0 16px}
   .spcs::-webkit-scrollbar{display:none}
   .spc{scroll-snap-align:start}
+  .spc .ph{aspect-ratio:4/3.4}
 }
 @media (prefers-reduced-motion:reduce){.vtag i{animation:none}}
 
@@ -790,16 +803,25 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);paddin
 <section class="sec sites" id="work">
   <div class="wrap">
     <div class="vhero rv">
-      <video class="vbg" muted loop playsinline preload="none" aria-hidden="true" data-src="/hydrant-sprinkler/assets/video/site-demo-bg.mp4" poster="/hydrant-sprinkler/assets/video/site-demo-poster.webp"></video>
       <div class="vcopy">
         <span class="vtag"><i></i>From our sites</span>
-        <h2>Live pump room demo &amp; handover</h2>
-        <p>Our engineers walk the client through the fire pump panel — auto start, pressure and controls — before signing off the system.</p>
-        <button class="vplay" type="button" id="vSound"><span class="pi">▶</span><span class="lbl">Watch with sound</span></button>
+        <h2>Real work, real sites</h2>
+        <p>Short clips from our own hydrant projects — no stock footage.</p>
+        <div class="vtabs" role="tablist" aria-label="Site videos">
+          <button class="vt on" type="button" data-i="0"><span class="n">01</span><span><b>Pump panel demo &amp; handover</b><small>Our engineers walk the client through the fire pump panel — auto start, pressure and controls.</small></span></button>
+          <button class="vt" type="button" data-i="1"><span class="n">02</span><span><b>Hydrant flow test</b><small>Full-pressure hose test at a power substation before handover.</small></span></button>
+        </div>
       </div>
-      <div class="vframe">
-        <video id="vMain" muted loop playsinline preload="none" data-src="/hydrant-sprinkler/assets/video/site-demo.mp4" poster="/hydrant-sprinkler/assets/video/site-demo-poster.webp" aria-label="Video: The Fire Wala team demonstrating the fire pump control panel at a client site"></video>
-        <button class="vmute" type="button" id="vMute" aria-label="Unmute video">🔇</button>
+      <div class="vbox" id="vbox">
+        <div class="vbars" aria-hidden="true"><span class="bar" data-i="0"><i></i></span><span class="bar" data-i="1"><i></i></span></div>
+          <div class="vslide on" data-i="0">
+            <video class="fill" muted playsinline preload="none" aria-hidden="true" data-src="/hydrant-sprinkler/assets/video/site-demo-bg.mp4" poster="/hydrant-sprinkler/assets/video/site-demo-poster.webp"></video>
+            <video class="main" muted playsinline preload="none" data-src="/hydrant-sprinkler/assets/video/site-demo.mp4" poster="/hydrant-sprinkler/assets/video/site-demo-poster.webp" aria-label="Video: The Fire Wala team demonstrating the fire pump control panel at a client site"></video>
+          </div>
+          <div class="vslide" data-i="1">
+            <video class="fill" muted playsinline preload="none" aria-hidden="true" data-src="/hydrant-sprinkler/assets/video/flow-test-bg.mp4" poster="/hydrant-sprinkler/assets/video/flow-test-poster.webp"></video>
+            <video class="main" muted playsinline preload="none" data-src="/hydrant-sprinkler/assets/video/flow-test.mp4" poster="/hydrant-sprinkler/assets/video/flow-test-poster.webp" aria-label="Video: The Fire Wala team running a hydrant hose flow test at a power substation"></video>
+          </div>
       </div>
     </div>
     <div class="spcs" id="pipeline">
@@ -1053,18 +1075,30 @@ const CONFIG = {
   else fl.classList.remove('hide-q');
 
 
-  // Our work: video hero (lazy-load when visible) + photo lightbox
-  const vh=document.querySelector('.vhero');
-  if(vh){
-    const vids=[...vh.querySelectorAll('video[data-src]')], vMain=document.getElementById('vMain'), vMute=document.getElementById('vMute'), vSound=document.getElementById('vSound');
-    const load=()=>vids.forEach(v=>{ if(!v.src){ v.src=v.dataset.src; } v.play().catch(()=>{}); });
-    if('IntersectionObserver' in window){
-      new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting) load(); else vids.forEach(v=>v.pause()); }),{threshold:.2}).observe(vh);
-    } else load();
-    const setSound=on=>{ vMain.muted=!on; vMute.textContent=on?'🔊':'🔇'; vMute.setAttribute('aria-label',on?'Mute video':'Unmute video');
-      vSound.querySelector('.lbl').textContent=on?'Sound on':'Watch with sound'; if(on){ if(!vMain.src) vMain.src=vMain.dataset.src; vMain.currentTime=0; vMain.play().catch(()=>{}); } };
-    vMute.addEventListener('click',()=>setSound(vMain.muted));
-    vSound.addEventListener('click',()=>setSound(true));
+  // Our work: two muted site videos in one box, crossfading one after the other
+  const vbox=document.getElementById('vbox');
+  if(vbox){
+    const slides=[...vbox.querySelectorAll('.vslide')], tabs=[...document.querySelectorAll('.vt')], bars=[...vbox.querySelectorAll('.bar i')];
+    let cur=0, visible=false, raf=0;
+    const vids=sl=>[...sl.querySelectorAll('video')];
+    const ensure=sl=>vids(sl).forEach(v=>{ if(!v.src) v.src=v.dataset.src; });
+    const tick=()=>{ const m=slides[cur].querySelector('.main'); if(m.duration) bars[cur].style.width=(m.currentTime/m.duration*100)+'%'; raf=requestAnimationFrame(tick); };
+    const show=i=>{
+      slides.forEach((sl,k)=>{ sl.classList.toggle('on',k===i); if(k!==i) vids(sl).forEach(v=>v.pause()); });
+      tabs.forEach((t,k)=>{ t.classList.toggle('on',k===i); t.setAttribute('aria-selected',k===i); });
+      bars.forEach((b,k)=>b.style.width=k<i?'100%':'0');
+      cur=i; ensure(slides[i]); ensure(slides[(i+1)%slides.length]);
+      if(visible) vids(slides[i]).forEach(v=>{ v.currentTime=0; v.play().catch(()=>{}); });
+    };
+    slides.forEach((sl,k)=>{ const m=sl.querySelector('.main'), f=sl.querySelector('.fill');
+      m.addEventListener('ended',()=>show((k+1)%slides.length));
+      m.addEventListener('timeupdate',()=>{ if(f.duration && Math.abs(f.currentTime-m.currentTime%f.duration)>.4) f.currentTime=m.currentTime%f.duration; });
+    });
+    tabs.forEach((t,k)=>t.addEventListener('click',()=>show(k)));
+    const start=()=>{ visible=true; ensure(slides[cur]); vids(slides[cur]).forEach(v=>v.play().catch(()=>{})); cancelAnimationFrame(raf); tick(); };
+    const stop=()=>{ visible=false; slides.forEach(sl=>vids(sl).forEach(v=>v.pause())); cancelAnimationFrame(raf); };
+    if('IntersectionObserver' in window) new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?start():stop()),{threshold:.25}).observe(vbox);
+    else start();
   }
   const pl=document.getElementById('pipeline');
   if(pl){
